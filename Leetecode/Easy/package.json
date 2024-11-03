@@ -1,0 +1,18 @@
+{
+  "name": "easy",
+  "version": "1.0.0",
+  "main": "rotateString.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "jest": "^29.6.0"
+  }
+}

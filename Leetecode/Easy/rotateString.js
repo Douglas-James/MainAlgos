@@ -43,3 +43,6 @@ console.log(rotateString(s, goal)); // true
 s = "abcde";
 goal = "abced";
 console.log(rotateString(s, goal)); // false
+
+// sending file to jest test
+module.exports = rotateString;
