@@ -13,3 +13,21 @@ test('rotateString - Example 1', () => {
 test('rotateString - Example 2', () => {
   expect(rotateString("abcde", "abced")).toBe(false);
 });
+
+// test twoSum function
+const twoSum = require('../twoSum');
+
+// Example 1:
+// input nums = [2,7,11,15], target = 9
+// output: [0,1]
+test('twoSum - Example 1', () => {
+  expect(twoSum([2,7,11,15], 9)).toEqual([0,1]);
+});
+
+// Example 2:
+// input nums = [3,2,4], target = 6
+// output: [1,2]
+test('twoSum - Example 2', () => {
+  expect(twoSum([3,2,4], 6)).toEqual([1,2]);
+});
+
