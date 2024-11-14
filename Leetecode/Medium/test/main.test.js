@@ -1,5 +1,5 @@
 // Import the function and ListNode class
-const { addTwoNumbers, ListNode, lengthOfLongestSubstring } = require('../index');
+const { addTwoNumbers, ListNode, lengthOfLongestSubstring, maxArea} = require('../index');
 
 // Helper function to convert array to linked list
 function arrayToList(arr) {
@@ -56,4 +56,18 @@ test('Example 2: "bbbbb"', () => {
 
 test('Example 3: "pwwkew"', () => {
     expect(lengthOfLongestSubstring("pwwkew")).toBe(3);
+});
+
+
+// Test cases for containerMostWater.js
+test('Example 1: [1,8,6,2,5,4,8,3,7]', () => {
+    expect(maxArea([1, 8, 6, 2, 5, 4, 8, 3, 7])).toBe(49);
+});
+
+test('Example 2: [1,1]', () => {
+    expect(maxArea([1, 1])).toBe(1);
+});
+
+test('Example 3: [4,3,2,1,4]', () => {
+    expect(maxArea([4, 3, 2, 1, 4])).toBe(16);
 });
