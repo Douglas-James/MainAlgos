@@ -33,3 +33,21 @@ jobs:
             echo "LICENSE file does not exist"
             exit 1
           fi
+      - name: Check for .gitignore file
+        run: |
+          if [ ! -f ".gitignore" ]; then
+            echo ".gitignore file does not exist"
+            exit 1
+          fi
+
+      - name: Run tests in Easy folder
+        working-directory: Leetecode/Easy
+        run: npm install && npm test
+
+      - name: Run tests in Medium folder
+        working-directory: Leetecode/Medium
+        run: npm install && npm test
+
+      - name: Run tests in Hard folder
+        working-directory: Leetecode/Hard
+        run: npm install && npm test
