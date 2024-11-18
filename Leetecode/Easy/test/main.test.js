@@ -1,4 +1,4 @@
-const rotateString = require('../rotateString');
+const {twoSum, rotateString, makeFancyString} = require('../index');
 
 // Example 1:
 // input s = "abcde", goal = "cdeab"
@@ -14,8 +14,6 @@ test('rotateString - Example 2', () => {
   expect(rotateString("abcde", "abced")).toBe(false);
 });
 
-// test twoSum function
-const twoSum = require('../twoSum');
 
 // Example 1:
 // input nums = [2,7,11,15], target = 9
@@ -31,3 +29,16 @@ test('twoSum - Example 2', () => {
   expect(twoSum([3,2,4], 6)).toEqual([1,2]);
 });
 
+
+// test makeFancyString
+test('makeFancyString - Example 1', () => {
+  expect(makeFancyString("leeetcode")).toBe("leetcode");
+});
+
+test('makeFancyString - Example 2', () => {
+  expect(makeFancyString("aaabaaaa")).toBe("aabaa");
+});
+
+test('makeFancyString - Example 3', () => {
+  expect(makeFancyString("aab")).toBe("aab");
+});
