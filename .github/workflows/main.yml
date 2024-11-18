@@ -11,8 +11,8 @@ jobs:
 
       - name: Check for LeeteCode folder
         run: |
-          if [ ! -d "LeeteCode" ]; then
-            echo "LeeteCode folder does not exist"
+          if [ ! -d "Leetecode" ]; then
+            echo "Leetecode folder does not exist"
             exit 1
           fi
 
