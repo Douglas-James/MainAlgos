@@ -1,0 +1,32 @@
+name: Check Files and Folders
+
+on: [push, pull_request]
+
+jobs:
+  check_files_and_folders:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Check for license folder
+        run: |
+          if [ ! -d "license" ]; then
+            echo "license folder is missing"
+            exit 1
+          fi
+
+      - name: Check for README.md file
+        run: |
+          if [ ! -f "README.md" ]; then
+            echo "README.md file is missing"
+            exit 1
+          fi
+
+      - name: Check for LeetCode folder
+        run: |
+          if [ ! -d "LeetCode" ]; then
+            echo "LeetCode folder is missing"
+            exit 1
+          fi
