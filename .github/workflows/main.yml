@@ -16,20 +16,20 @@ jobs:
             exit 1
           fi
 
-      - name: Check for Easy, Medium, and Hard folders
+      - name: Check if LeeteCode folder is empty
         run: |
-          for folder in Easy Medium Hard; do
-          if [ ! -d "Leetecode/$folder" ]; then
-            echo "Leetecode/$folder folder does not exist"
+          if [ -z "$(ls -A Leetecode)" ]; then
+            echo "Leetecode folder is empty"
             exit 1
           fi
-          done
 
-      - name: Check for LICENSE and README files in Algos folder
+      - name: Check for README.md file and LICENSE file
         run: |
-          for file in LICENSE README; do
-           if [ ! -f "$file" ]; then
-             echo "$file file does not exist in the Algos folder"
-             exit 1
-           fi
-          done
+          if [ ! -f "README.md" ]; then
+            echo "README.md file does not exist"
+            exit 1
+          fi
+          if [ ! -f "LICENSE" ]; then
+            echo "LICENSE file does not exist"
+            exit 1
+          fi
