@@ -1,5 +1,5 @@
 // Import the function and ListNode class
-const { addTwoNumbers, ListNode, lengthOfLongestSubstring, maxArea} = require('../index');
+const { addTwoNumbers, ListNode, lengthOfLongestSubstring, maxArea, longestPalindrome, convert, reverse} = require('../index');
 
 // Helper function to convert array to linked list
 function arrayToList(arr) {
@@ -70,4 +70,55 @@ test('Example 2: [1,1]', () => {
 
 test('Example 3: [4,3,2,1,4]', () => {
     expect(maxArea([4, 3, 2, 1, 4])).toBe(16);
+});
+
+// Test cases for addTwoNumbers.js
+test('Example 1: l1 = [2,4,3], l2 = [5,6,4]', () => {
+    const l1 = arrayToList([2, 4, 3]);
+    const l2 = arrayToList([5, 6, 4]);
+    const result = addTwoNumbers(l1, l2);
+    expect(listToArray(result)).toEqual([7, 0, 8]);
+});
+
+test('Example 2: l1 = [0], l2 = [0]', () => {
+    const l1 = arrayToList([0]);
+    const l2 = arrayToList([0]);
+    const result = addTwoNumbers(l1, l2);
+    expect(listToArray(result)).toEqual([0]);
+});
+
+// Test cases for longestPalindromic.js
+test('Example 1: "babad"', () => {
+    expect(longestPalindrome("babad")).toBe("bab");
+});
+
+test('Example 2: "cbbd"', () => {
+    expect(longestPalindrome("cbbd")).toBe("bb");
+});
+
+
+// Test cases for zigzagConvertion.js
+test('Example 1: "PAYPALISHIRING", numRows = 3', () => {
+    expect(convert("PAYPALISHIRING", 3)).toBe("PAHNAPLSIIGYIR");
+});
+
+test('Example 2: "PAYPALISHIRING", numRows = 4', () => {
+    expect(convert("PAYPALISHIRING", 4)).toBe("PINALSIGYAHRPI");
+});
+
+test('Example 3: "A", numRows = 1', () => {
+    expect(convert("A", 1)).toBe("A");
+});
+
+// Test cases for reverseInteger.js
+test('Example 1: 123', () => {
+    expect(reverse(123)).toBe(321);
+});
+
+test('Example 2: -123', () => {
+    expect(reverse(-123)).toBe(-321);
+});
+
+test('Example 3: 120', () => {
+    expect(reverse(120)).toBe(21);
 });
