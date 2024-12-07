@@ -1,5 +1,8 @@
 // Import the function and ListNode class
-const { addTwoNumbers, ListNode, lengthOfLongestSubstring, maxArea, longestPalindrome, convert, reverse} = require('../index');
+const { addTwoNumbers, ListNode,
+    lengthOfLongestSubstring, maxArea,
+    longestPalindrome, convert,
+    reverse, myAtoi} = require('../index');
 
 // Helper function to convert array to linked list
 function arrayToList(arr) {
@@ -121,4 +124,17 @@ test('Example 2: -123', () => {
 
 test('Example 3: 120', () => {
     expect(reverse(120)).toBe(21);
+});
+
+// Test cases for stringtoInteger.js
+test('Example 1: "42"', () => {
+    expect(myAtoi("42")).toBe(42);
+});
+
+test('Example 2: "   -42"', () => {
+    expect(myAtoi("   -42")).toBe(-42);
+});
+
+test('Example 3: "4193 with words"', () => {
+    expect(myAtoi("4193 with words")).toBe(4193);
 });

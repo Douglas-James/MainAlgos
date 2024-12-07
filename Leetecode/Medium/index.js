@@ -4,6 +4,7 @@ const maxArea = require('./containerMostWater');
 const longestPalindrome = require('./longestPalindromic');
 const convert = require('./zigzagConvertion');
 const reverse = require('./reverseInteger');
+const myAtoi = require('./stringtoInteger');
 
 module.exports = {
   addTwoNumbers,
@@ -13,4 +14,5 @@ module.exports = {
   longestPalindrome,
   convert,
   reverse,
+  myAtoi,
 };
