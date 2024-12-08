@@ -1,4 +1,6 @@
-const {twoSum, rotateString, makeFancyString} = require('../index');
+const {twoSum, rotateString, makeFancyString,
+    isPalindrome
+} = require('../index');
 
 // Test cases for twoSum.js
 test('Example 1: nums = [2,7,11,15], target = 9', () => {
@@ -29,4 +31,18 @@ test('Example 1: s = "leeetcode"', () => {
 
 test('Example 2: s = "aaabaaaa"', () => {
     expect(makeFancyString("aaabaaaa")).toBe("aabaa");
+});
+
+
+// Test cases for isPalindrome.js
+test('Example 1: x = 121', () => {
+    expect(isPalindrome(121)).toBe(true);
+});
+
+test('Example 2: x = -121', () => {
+    expect(isPalindrome(-121)).toBe(false);
+});
+
+test('Example 3: x = 10', () => {
+    expect(isPalindrome(10)).toBe(false);
 });
