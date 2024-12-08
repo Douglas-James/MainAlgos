@@ -13,7 +13,9 @@ const isPalindrome = (x) => {
  let reverse = 0;
  let original = x;
  while(x > 0){
+    // revers part here is to get the last digit of the number
      reverse = reverse * 10 + x % 10;
+     // remove the last digit from the number
      x = Math.floor(x / 10);
  }
 
