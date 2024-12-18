@@ -1,0 +1,14 @@
+{
+  "name": "datastructures",
+  "version": "1.0.0",
+  "description": "\"Data Strictires\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "\"James Douglas\"",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
