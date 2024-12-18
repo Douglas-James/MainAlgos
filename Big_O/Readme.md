@@ -16,6 +16,8 @@ Big O notation is used to describe the performance or complexity of an algorithm
 
 ## Visual Representation
 
+![All Time Complexities](images/all_complexities.png)
+
 ### Constant Time - O(1)
 
 ![O(1)](images/01.png)
