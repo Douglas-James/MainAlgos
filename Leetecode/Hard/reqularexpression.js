@@ -15,7 +15,7 @@
 
 // Solution 1
 const isMatch = (s, p) => {
-  // Step 1: Create empty helper function
+  // Step 1: Create a helper function to check if the pattern is a match
   const dp = (i, j) => {
     // Step 2: Check if the value is already in the cache
     if (cache[i][j] !== undefined) return cache[i][j];
