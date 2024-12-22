@@ -14,6 +14,7 @@
 // Explanation: '*' means zero or more of the preceding element, 'a'. Therefore, by repeating 'a' once, it becomes "aa".
 
 // Solution 1
+// Big O: O(n*m)
 const isMatch = (s, p) => {
   // Step 1: Create a helper function to check if the pattern is a match
   const dp = (i, j) => {
