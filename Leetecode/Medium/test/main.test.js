@@ -2,7 +2,7 @@
 const { addTwoNumbers, ListNode,
     lengthOfLongestSubstring, maxArea,
     longestPalindrome, convert,
-    reverse, myAtoi} = require('../index');
+    reverse, myAtoi, intToRoman} = require('../index');
 
 // Helper function to convert array to linked list
 function arrayToList(arr) {
@@ -137,4 +137,18 @@ test('Example 2: "   -42"', () => {
 
 test('Example 3: "4193 with words"', () => {
     expect(myAtoi("4193 with words")).toBe(4193);
+});
+
+
+// Test cases for Integertoroman.js
+test('Example 1: 3', () => {
+    expect(intToRoman(3)).toBe("III");
+});
+
+test('Example 2: 4', () => {
+    expect(intToRoman(4)).toBe("IV");
+});
+
+test('Example 3: 9', () => {
+    expect(intToRoman(9)).toBe("IX");
 });

@@ -5,6 +5,7 @@ const longestPalindrome = require('./longestPalindromic');
 const convert = require('./zigzagConvertion');
 const reverse = require('./reverseInteger');
 const myAtoi = require('./stringtoInteger');
+const intToRoman = require('./Integertoroman');
 
 module.exports = {
   addTwoNumbers,
@@ -15,4 +16,5 @@ module.exports = {
   convert,
   reverse,
   myAtoi,
+  intToRoman,
 };
