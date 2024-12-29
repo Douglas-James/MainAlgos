@@ -20,10 +20,10 @@ To run the tests, use the following command:
 npm test
 ```
 
+For more information on how to use Jest, refer to the [official Jest documentation](https://jestjs.io/docs/en/getting-started).
+
 ## Upcoming Features
 
 We are excited to announce that an application folder will be available soon, allowing you to run your algorithms seamlessly. Stay tuned for the release in 2025!
-
-For more information on how to use Jest, refer to the [official Jest documentation](https://jestjs.io/docs/en/getting-started).
 
 Happy Coding!
