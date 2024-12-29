@@ -1,6 +1,6 @@
 // section 1
-
-
+const {reverseString, addUpToFirst, addUpToSecond, logAtLeast5, logAtMost5, } = require('./section-1/example');
+const {binarySearch} = require('./section-1/example_a');
 
 
 // section 2
@@ -38,6 +38,12 @@
 // export all that into one object to be used in the test folder for testing
 module.exports = {
   // section 1
+  reverseString,
+  addUpToFirst,
+  addUpToSecond,
+  logAtLeast5,
+  logAtMost5,
+  binarySearch,
   // section 2
   // section 3
   // section 4

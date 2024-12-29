@@ -1,5 +1,5 @@
 const {twoSum, rotateString, makeFancyString,
-    isPalindrome
+    isPalindrome, romanToInt
 } = require('../index');
 
 // Test cases for twoSum.js
@@ -45,4 +45,17 @@ test('Example 2: x = -121', () => {
 
 test('Example 3: x = 10', () => {
     expect(isPalindrome(10)).toBe(false);
+});
+
+// Test cases for romanToInt.js
+test('Example 1: s = "III"', () => {
+    expect(romanToInt("III")).toBe(3);
+});
+
+test('Example 2: s = "IV"', () => {
+    expect(romanToInt("IV")).toBe(4);
+});
+
+test('Example 3: s = "IX"', () => {
+    expect(romanToInt("IX")).toBe(9);
 });
