@@ -51,10 +51,6 @@ By incorporating tests into your development workflow, you can improve the quali
 - [Section 9](./section-9)
 ```
 
-## Upcoming Features
-
-We are excited to announce that an application folder will be available soon, allowing you to run your algorithms seamlessly. Stay tuned for the release in 2025!
-
 ## Conclusion
 
 Understanding different algorithms and their efficiencies is key in computer science. Fast algorithms are preferred for speed, while recursion helps solve complex problems.
