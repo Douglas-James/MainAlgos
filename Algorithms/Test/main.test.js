@@ -76,7 +76,7 @@ test("binarySearch", () => {
   console.log(`binarySearch Execution Time: ${(end - start).toFixed(3)}ms`);
 });
 
-// mergeSort test
+// example_b test
 test("mergeSort", () => {
   const start = performance.now();
   let arry = [38, 27, 43, 3, 9, 82, 10];
