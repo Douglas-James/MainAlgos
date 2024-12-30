@@ -1,6 +1,7 @@
 const {twoSum, rotateString, makeFancyString,
-    isPalindrome, romanToInt
+    isPalindrome, romanToInt, longestPrefix
 } = require('../index');
+// const {performance} = require('perf_hooks');
 
 // Test cases for twoSum.js
 test('Example 1: nums = [2,7,11,15], target = 9', () => {
@@ -59,3 +60,22 @@ test('Example 2: s = "IV"', () => {
 test('Example 3: s = "IX"', () => {
     expect(romanToInt("IX")).toBe(9);
 });
+
+// Test cases for longestPrefix.js
+test('Example 1: strs = ["flower","flow","flight"]', () => {
+    const start = performance.now();
+    expect(longestPrefix(["flower", "flow", "flight"])).toBe("fl");
+    const end = performance.now();
+    console.log(`longestPrefix Execution Time: ${(end - start).toFixed(3)}ms`);
+});
+
+test('Example 2: strs = ["dog","racecar","car"]', () => {
+    const start = performance.now();
+    expect(longestPrefix(["dog", "racecar", "car"])).toBe("");
+    const end = performance.now();
+    console.log(`longestPrefix Execution Time: ${(end - start).toFixed(3)}ms`);
+});
+
+// empty string
+
+
