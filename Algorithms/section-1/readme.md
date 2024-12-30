@@ -8,15 +8,15 @@ Big O notation is a mathematical concept used to describe the efficiency of algo
 
 ### `example.js`
 
-This file contains a basic example of an algorithm with a linear time complexity, O(n). It demonstrates how the execution time increases linearly with the input size.
+This file contains a basic example of an algorithm with a linear time complexity, O(n). It demonstrates how the execution time increases linearly with the input size. The code iterates through an array and performs a constant-time operation on each element.
 
 ### `example_a.js`
 
-In this file, we explore an algorithm with a quadratic time complexity, O(n^2). It shows how nested loops can significantly impact the performance of our code, especially with larger input sizes.
+In this file, we explore an algorithm with a quadratic time complexity, O(n^2). It shows how nested loops can significantly impact the performance of our code, especially with larger input sizes. The code includes a double loop that iterates over an array, resulting in a number of operations proportional to the square of the input size.
 
 ### `example_b.js`
 
-This file presents an algorithm with logarithmic time complexity, O(log n). It highlights the efficiency of algorithms that reduce the problem size with each iteration, such as binary search.
+This file presents an algorithm with logarithmic time complexity, O(log n). It highlights the efficiency of algorithms that reduce the problem size with each iteration, such as binary search. The code demonstrates a binary search algorithm that repeatedly divides the search interval in half, significantly reducing the number of comparisons needed.
 
 ## Conclusion
 
