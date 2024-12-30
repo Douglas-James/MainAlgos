@@ -5,15 +5,15 @@
   nLogNFun(3) => 1, 2, 3
   nLogNFun(1) => 1
 */
-function nLogNFun(n){
-  x = y;
-  while(n > 1){
-   n = Math.floor(n/2);
-   for(let i = 1; i <= x; i++){
-     console.log(i);
-   }
-  }
-}
+// function nLogNFun(n){
+//   x = y;
+//   while(n > 1){
+//    n = Math.floor(n/2);
+//    for(let i = 1; i <= x; i++){
+//      console.log(i);
+//    }
+//   }
+// }
 
 /*
 */
@@ -69,11 +69,9 @@ function merge(left, right){
   return result.concat(left.slice(leftIndex)).concat(right.slice(rightIndex));
 }
 
-nLogNFun(10); // 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+// nLogNFun(10); // 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
 
 module.exports = {
-  nLogNFun,
   mergeSort,
   merge
-
 };

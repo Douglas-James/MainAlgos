@@ -1,5 +1,5 @@
 // all the import down here
-const { reverseString, addUpToFirst, addUpToSecond, logAtLeast5, logAtMost5, binarySearch} = require('../index');
+const { reverseString, addUpToFirst, addUpToSecond, logAtLeast5, logAtMost5, binarySearch, mergeSort, merge} = require('../index');
 const {performance} = require('perf_hooks');
 
 // section 1  test file
@@ -74,6 +74,15 @@ test("binarySearch", () => {
   expect(binarySearch(arry, starts, ends, target)).toBe(true);
   const end = performance.now();
   console.log(`binarySearch Execution Time: ${(end - start).toFixed(3)}ms`);
+});
+
+// mergeSort test
+test("mergeSort", () => {
+  const start = performance.now();
+  let arry = [38, 27, 43, 3, 9, 82, 10];
+  expect(mergeSort(arry)).toEqual([3, 9, 10, 27, 38, 43, 82]);
+  const end = performance.now();
+  console.log(`mergeSort Execution Time: ${(end - start).toFixed(3)}ms`);
 });
 
 
