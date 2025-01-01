@@ -1,31 +1,36 @@
-/* Binary Search
-*
-*/
-// let arry = [1, 2, 3, 4, 5, 6, 7, 8];
-// let start = 0;
-// let end = arry.length - 1; // 7 index
-// let target = 10;
-// time complexity: O(log n) - log base 2 of n
-function binarySearch(arr, start, end, target) {
-  // base case
-  if(start > end) {
+/*
+ * Binary Search Implementation
+ * Time Complexity: O(log n) - Binary search halves the search space at each step.
+ */
+
+const binarySearch = (arr, start, end, target) => {
+  // Base case: If start index exceeds end, the target is not in the array.
+  if (start > end) {
     return false;
   }
-  let midIndex = Math.floor((start + end) / 2);
-  if(arr[midIndex] === target) {
+
+  const midIndex = Math.floor((start + end) / 2);
+
+  // Check if the middle element is the target.
+  if (arr[midIndex] === target) {
     return true;
   }
 
-  if(arr[midIndex] > target) {
+  // If the target is smaller, search the left half of the array.
+  if (arr[midIndex] > target) {
     return binarySearch(arr, start, midIndex - 1, target);
-  }else{
-    return binarySearch(arr, midIndex + 1, end, target);
   }
 
-}
-// console.log(binarySearch(arry, start, end, target));
+  // Otherwise, search the right half of the array.
+  return binarySearch(arr, midIndex + 1, end, target);
+};
 
-// export all the functions
+// Example usage:
+// const arr = [1, 2, 3, 4, 5, 6, 7, 8];
+// const target = 10;
+// console.log(binarySearch(arr, 0, arr.length - 1, target));
+
+// Export the function for testing or external use.
 module.exports = {
-  binarySearch
+  binarySearch,
 };
