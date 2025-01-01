@@ -6,7 +6,7 @@
 const binarySearch = (arr, start, end, target) => {
   // Base case: If start index exceeds end, the target is not in the array.
   if (start > end) {
-    return false;
+    return false; // Target not found.
   }
 
   const midIndex = Math.floor((start + end) / 2);
