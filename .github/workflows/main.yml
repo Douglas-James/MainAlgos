@@ -51,3 +51,7 @@ jobs:
       - name: Run tests in Hard folder
         working-directory: Leetecode/Hard
         run: npm install && npm test
+
+      - name: Run test in Algorithms folder
+        working-directory: Algorithms/
+        run: npm install && npm test

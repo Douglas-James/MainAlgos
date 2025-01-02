@@ -1,5 +1,7 @@
 // all the import down here
-const { reverseString, addUpToFirst, addUpToSecond, logAtLeast5, logAtMost5, binarySearch, mergeSort, merge} = require('../index');
+const { reverseString, addUpToFirst, addUpToSecond, logAtLeast5, logAtMost5, binarySearch, mergeSort, merge,
+  charCount
+} = require('../index');
 const {performance} = require('perf_hooks');
 
 // section 1  test file
@@ -87,6 +89,33 @@ test("mergeSort", () => {
 
 
 // section 2 test file
+// charCount test
+test('charCount', () => {
+  expect(charCount("Hello World")).toEqual({
+    h: 1,
+    e: 1,
+    l: 3,
+    o: 2,
+    w: 1,
+    r: 1,
+    d: 1
+  });
+});
+
+test('charCount', () => {
+  expect(charCount("Hello World")).not.toEqual({
+    h: 1,
+    e: 1,
+    l: 3,
+    o: 2,
+    w: 1,
+    r: 1,
+    d: 2
+  });
+});
+
+
+
 
 // section 3 test file
 

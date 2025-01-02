@@ -5,15 +5,15 @@
   nLogNFun(3) => 1, 2, 3
   nLogNFun(1) => 1
 */
-function nLogNFun(n){
-  let x = n;
-  while(n > 1){
-    n = Math.floor(n / 2);
-    for(let i = 1; i <= x; i++){
-      console.log(i);
-    }
-  }
-}
+// function nLogNFun(n){
+//   let x = n;
+//   while(n > 1){
+//     n = Math.floor(n / 2);
+//     for(let i = 1; i <= x; i++){
+//       console.log(i);
+//     }
+//   }
+// }
 /*
   Merge Sort function that takes an array of numbers and returns a sorted array
   mergeSort([38, 27, 43, 3, 9, 82, 10]) => [3, 9, 10, 27, 38, 43, 82]
@@ -84,80 +84,80 @@ function merge(left, right){
  * Space Complexity: O(n)
  */
 
-function fib(n){
-  if(n === 0){
-    return 0;
-  }
-  if(n <= 1){
-    return n;
-  }
-  return fib(n - 1) + fib(n - 2);
-}
+// function fib(n){
+//   if(n === 0){
+//     return 0;
+//   }
+//   if(n <= 1){
+//     return n;
+//   }
+//   return fib(n - 1) + fib(n - 2);
+// }
 
 /**
  *  f function that takes a number and prints a pattern of asterisks
  *  Time Complexity: O(n!)
  * Space Complexity: O(n)
  */
-function f(n){
-  if(n === 0){
-    console.log('*************');
-    return;
-  }
-  for(let i = 0; i < n; i++){
-    f(n - 1);
-  }
-}
+// function f(n){
+//   if(n === 0){
+//     console.log('*************');
+//     return;
+//   }
+//   for(let i = 0; i < n; i++){
+//     f(n - 1);
+//   }
+// }
 /*
 * two take a number and performance some operation
 * Time Complexity: O(2n)
 * Space Complexity: O(1)
 */
-function two(n){
-  // 0(n)
-  for(let i = 0; i < n; i++){
-    // do something
-  }
-  // 0(n)
-  for(let j = 0; j < n; j++){
-    // do something
-  }
+// function two(n){
+//   // 0(n)
+//   for(let i = 0; i < n; i++){
+//     // do something
+//   }
+//   // 0(n)
+//   for(let j = 0; j < n; j++){
+//     // do something
+//   }
 
-  // 0(n + n) => 0(2n)
-}
+//   // 0(n + n) => 0(2n)
+// }
 
 /*
 * twoLoops function that takes two numbers a and b and performs some operation
 * Time Complexity: O(a + b)
 * Space Complexity: O(1)
 */
-function  twoLoops(a, b) {
-  for(let i = 0; i < a; i++){
-    // do something
-  } //
+// function  twoLoops(a, b) {
+//   for(let i = 0; i < a; i++){
+//     // do something
+//   } //
 
-  for(let j = 0; j < b; j++){
-    // do something
-  }
+//   for(let j = 0; j < b; j++){
+//     // do something
+//   }
 
-}
+// }
 
 /*
 * twoLoopsNested function that takes a number and b number and performs some operation
 * Time Complexity: O(a * b)
 * Space Complexity: O(1)
 */
-function twoLoopsNested(a, b){
-  // 0(a)
-  for(let i = 0; i < a; i++){
-    // 0(b)
-    for(let j = 0; j < b; j++){
-      // do something
-    }
-  }
+// function twoLoopsNested(a, b){
+//   // 0(a)
+//   for(let i = 0; i < a; i++){
+//     // 0(b)
+//     for(let j = 0; j < b; j++){
+//       // do something
+//     }
+//   }
 
-  // 0(a * b)
-}
+//   // 0(a * b)
+// }
 
 /*
 * twoLoopsNested function that takes a is o(n2)
@@ -165,17 +165,17 @@ function twoLoopsNested(a, b){
 * Space Complexity: O(1)
 */
 
-function twoLoops(n){
-  // 0(n)
-  for(let i = 0; i < n; i++){
-    // 0(n)
-    for(let j = 0; j < n; j++){
-      // do something
-    }
-  }
+// function twoLoops(n){
+//   // 0(n)
+//   for(let i = 0; i < n; i++){
+//     // 0(n)
+//     for(let j = 0; j < n; j++){
+//       // do something
+//     }
+//   }
 
-  // 0(n^2)
-}
+//   // 0(n^2)
+// }
 
 
 // export all the functions

@@ -1,11 +1,12 @@
 // section 1
-const {reverseString, addUpToFirst, addUpToSecond, logAtLeast5, logAtMost5, } = require('./section-1/example');
 const {binarySearch} = require('./section-1/example_a');
 const {mergeSort, merge} = require('./section-1/example_b');
+const {reverseString, addUpToFirst, addUpToSecond, logAtLeast5, logAtMost5} = require('./section-1/example');
+
 
 
 // section 2
-
+const {charCount} = require('./section-2/charCount');
 
 
 
@@ -48,6 +49,7 @@ module.exports = {
   mergeSort,
   merge,
   // section 2
+  charCount,
   // section 3
   // section 4
   // section 5
