@@ -14,10 +14,6 @@ In the **Big_O** folder, you will find detailed explanations of Big O Notation, 
 | O(2^n)     | Exponential Time  | The algorithm's time complexity grows exponentially with the input size.               |
 | O(n!)      | Factorial Time    | The algorithm's time complexity grows factorially with the input size.                 |
 
-### Big O Notation Graphic
-
-![Big O Notation](https://www.bigocheatsheet.com/img/big-o-cheat-sheet-poster.png)
-
 Explore the **Big_O** folder to find more detailed explanations and examples of each notation.
 
 # LeetCode Solutions
