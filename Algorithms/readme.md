@@ -15,10 +15,6 @@ Algorithms are step-by-step methods for solving problems. They are crucial in co
 | **Recursion**       | When a function calls itself to solve a problem.               | - **Factorial Calculation**: Multiplies a number by the factorial of the number minus one.                |
 |                     |                                                                | - **Fibonacci Sequence**: Sums the two preceding numbers to get the next number in the sequence.          |
 
-## Test
-
-To ensure the correctness and efficiency of algorithms, it is important to write and run tests. Using a testing framework like `npm test` can help automate this process.
-
 ### Example
 
 To run tests for your algorithms, you can use the following command:
@@ -26,6 +22,18 @@ To run tests for your algorithms, you can use the following command:
 ```sh
 npm test
 ```
+
+### Folder Structure
+
+The `Test` folder contains the `main.test.js` file, which is responsible for testing your code. The `index.js` file export the code to the `Test` folder to be tested.
+
+```markdown
+- /Test
+  - main.test.js
+- index.js
+```
+
+If you fork this repository, GitHub Actions will automatically run `npm test`, which might be challenging to understand initially. Please visit the [GitHub Actions documentation](https://docs.github.com/en/actions) for more information.
 
 This will execute the test scripts defined in your `package.json` file, allowing you to verify that your algorithms work as expected.
 
