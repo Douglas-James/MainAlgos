@@ -10,15 +10,25 @@ This repository contains solutions to LeetCode problems categorized by difficult
 
 Feel free to explore the folders and find solutions to various LeetCode problems.
 
-## Testing
+## Jest Docs
+
+For more information on how to use Jest, refer to the [official Jest documentation](https://jestjs.io/docs/en/getting-started).
 
 This project uses [Jest](https://jestjs.io/) for testing. Jest is a delightful JavaScript Testing Framework with a focus on simplicity.
 
-To run the tests, use the following command:
+### Folder Structure
 
-```bash
-npm test
+The `Test` folder contains the `main.test.js` file, which is responsible for testing your code. The `index.js` file export the code to the `Test` folder to be tested.
+
+```markdown
+- /Test
+  - main.test.js
+- index.js
 ```
+
+If you fork this repository, GitHub Actions will automatically run `npm test`, which might be challenging to understand initially. Please visit the [GitHub Actions documentation](https://docs.github.com/en/actions) for more information.
+
+This will execute the test scripts defined in your `package.json` file, allowing you to verify that your algorithms work as expected.
 
 ## Algorithms Folder
 
@@ -54,10 +64,6 @@ The **Data Structures** folder contains solutions and explanations for various d
 - **Section 12**: Dynamic Programming
 
 Explore each section to find detailed solutions and explanations for different types of data structure problems.
-
-## Jest Test
-
-For more information on how to use Jest, refer to the [official Jest documentation](https://jestjs.io/docs/en/getting-started).
 
 ## Upcoming Features
 

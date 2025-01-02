@@ -15,37 +15,6 @@ Algorithms are step-by-step methods for solving problems. They are crucial in co
 | **Recursion**       | When a function calls itself to solve a problem.               | - **Factorial Calculation**: Multiplies a number by the factorial of the number minus one.                |
 |                     |                                                                | - **Fibonacci Sequence**: Sums the two preceding numbers to get the next number in the sequence.          |
 
-### Example
-
-To run tests for your algorithms, you can use the following command:
-
-```sh
-npm test
-```
-
-### Folder Structure
-
-The `Test` folder contains the `main.test.js` file, which is responsible for testing your code. The `index.js` file export the code to the `Test` folder to be tested.
-
-```markdown
-- /Test
-  - main.test.js
-- index.js
-```
-
-If you fork this repository, GitHub Actions will automatically run `npm test`, which might be challenging to understand initially. Please visit the [GitHub Actions documentation](https://docs.github.com/en/actions) for more information.
-
-This will execute the test scripts defined in your `package.json` file, allowing you to verify that your algorithms work as expected.
-
-### Benefits
-
-- **Automation**: Automates the testing process, saving time and effort.
-- **Reliability**: Ensures that your algorithms produce the correct results.
-- **Maintenance**: Makes it easier to maintain and update your codebase.
-
-By incorporating tests into your development workflow, you can improve the quality and reliability of your algorithms.
-
-```markdown
 ## Folder Structure
 
 - [Section 1](./section-1)
@@ -57,8 +26,10 @@ By incorporating tests into your development workflow, you can improve the quali
 - [Section 7](./section-7)
 - [Section 8](./section-8)
 - [Section 9](./section-9)
+
 ```
 
 ## Conclusion
 
 Understanding different algorithms and their efficiencies is key in computer science. Fast algorithms are preferred for speed, while recursion helps solve complex problems.
+```
