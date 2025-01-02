@@ -67,6 +67,6 @@ Explore each section to find detailed solutions and explanations for different t
 
 ## Upcoming Features
 
-We are excited to announce that an application folder will be available soon, allowing you to run your algorithms seamlessly. Stay tuned for the release in 2025!
+Coming soon! In 2025, we will introduce new features that will allow you to run your algorithms seamlessly. Stay tuned for updates. Once released, you can find more information [here](#).
 
 Happy Coding!
