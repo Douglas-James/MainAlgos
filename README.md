@@ -1,3 +1,25 @@
+## Big O Notation
+
+In the **Big_O** folder, you will find detailed explanations of Big O Notation, including a graphic table that explains different notations, their names, and descriptions.
+
+### Big O Notation Table
+
+| Notation   | Name              | Description                                                                            |
+| ---------- | ----------------- | -------------------------------------------------------------------------------------- |
+| O(1)       | Constant Time     | The algorithm takes the same amount of time regardless of the input size.              |
+| O(log n)   | Logarithmic Time  | The algorithm's time complexity grows logarithmically as the input size increases.     |
+| O(n)       | Linear Time       | The algorithm's time complexity grows linearly with the input size.                    |
+| O(n log n) | Linearithmic Time | The algorithm's time complexity grows in a combination of linear and logarithmic time. |
+| O(n^2)     | Quadratic Time    | The algorithm's time complexity grows quadratically with the input size.               |
+| O(2^n)     | Exponential Time  | The algorithm's time complexity grows exponentially with the input size.               |
+| O(n!)      | Factorial Time    | The algorithm's time complexity grows factorially with the input size.                 |
+
+### Big O Notation Graphic
+
+![Big O Notation](https://www.bigocheatsheet.com/img/big-o-cheat-sheet-poster.png)
+
+Explore the **Big_O** folder to find more detailed explanations and examples of each notation.
+
 # LeetCode Solutions
 
 This repository contains solutions to LeetCode problems categorized by difficulty.
