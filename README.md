@@ -52,15 +52,15 @@ This will execute the test scripts defined in your `package.json` file, allowing
 
 The **Algorithms** folder contains solutions to various algorithm problems. The problems are organized into sections for easy navigation:
 
-- **Section 1**: Basic Algorithms
-- **Section 2**: Understanding the Problems
-- **Section 3**:
-- **Section 4**:
-- **Section 5**:
-- **Section 6**:
-- **Section 7**:
-- **Section 8**:
-- **Section 9**:
+- **Section 1**: [Basic Algorithms](./Algorithms/section-1/)
+- **Section 2**: [Understanding the Problems](./Algorithms/section-2/)
+- **Section 3**: [Searching Algorithns](./Algorithms/section-3/)
+- **Section 4**: [Bubble Sort](./Algorithms/section-4/)
+- **Section 5**: [Selection Sort](./Algorithms/section-5/)
+- **Section 6**: [Insertion Sort](./Algorithms/section-6/)
+- **Section 7**: [Merge Sort](./Algorithms/section-7/)
+- **Section 8**: [Quick Sort](./Algorithms/section-8/)
+- **Section 9**: [Radix Sort](./Algorithms/section-9/)
 
 Explore each section to find detailed solutions and explanations for different types of algorithm problems.
 
