@@ -42,7 +42,7 @@ The **Algorithms** folder contains solutions to various algorithm problems. The 
 
 - **Section 1**: [Basic Algorithms](./Algorithms/section-1/)
 - **Section 2**: [Understanding the Problems](./Algorithms/section-2/)
-- **Section 3**: [Searching Algorithns](./Algorithms/section-3/)
+- **Section 3**: [Searching Algorithms](./Algorithms/section-3/)
 - **Section 4**: [Bubble Sort](./Algorithms/section-4/)
 - **Section 5**: [Selection Sort](./Algorithms/section-5/)
 - **Section 6**: [Insertion Sort](./Algorithms/section-6/)
