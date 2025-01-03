@@ -1,18 +1,6 @@
 ## Big O Notation
 
-In the **Big_O** folder, you will find detailed explanations of Big O Notation, including a graphic table that explains different notations, their names, and descriptions.
-
-### Big O Notation Table
-
-| Notation   | Name              | Description                                                                            |
-| ---------- | ----------------- | -------------------------------------------------------------------------------------- |
-| O(1)       | Constant Time     | The algorithm takes the same amount of time regardless of the input size.              |
-| O(log n)   | Logarithmic Time  | The algorithm's time complexity grows logarithmically as the input size increases.     |
-| O(n)       | Linear Time       | The algorithm's time complexity grows linearly with the input size.                    |
-| O(n log n) | Linearithmic Time | The algorithm's time complexity grows in a combination of linear and logarithmic time. |
-| O(n^2)     | Quadratic Time    | The algorithm's time complexity grows quadratically with the input size.               |
-| O(2^n)     | Exponential Time  | The algorithm's time complexity grows exponentially with the input size.               |
-| O(n!)      | Factorial Time    | The algorithm's time complexity grows factorially with the input size.                 |
+In the **[Big_O](./Big_O/)** folder, you will find detailed explanations of Big O Notation, including a graphic table that explains different notations, their names, and descriptions.
 
 Explore the **Big_O** folder to find more detailed explanations and examples of each notation.
 
@@ -22,9 +10,9 @@ This repository contains solutions to LeetCode problems categorized by difficult
 
 ## Folders
 
-- **Easy**: Contains solutions to LeetCode Easy problems.
-- **Medium**: Contains solutions to LeetCode Medium problems.
-- **Hard**: Contains solutions to LeetCode Hard problems.
+- **[Easy](./Leetecode/Easy/)**: Contains solutions to LeetCode Easy problems.
+- **[Medium](./Leetecode/Medium/)**: Contains solutions to LeetCode Medium problems.
+- **[Hard](./Leetecode/Hard/)**: Contains solutions to LeetCode Hard problems.
 
 Feel free to explore the folders and find solutions to various LeetCode problems.
 
