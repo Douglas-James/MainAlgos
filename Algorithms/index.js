@@ -7,6 +7,7 @@ const {reverseString, addUpToFirst, addUpToSecond, logAtLeast5, logAtMost5} = re
 
 // section 2
 const {charCount} = require('./section-2/charCount');
+const {sameFrequency} = require('./section-2/sameFrequency');
 
 
 
@@ -50,6 +51,7 @@ module.exports = {
   merge,
   // section 2
   charCount,
+  sameFrequency,
   // section 3
   // section 4
   // section 5

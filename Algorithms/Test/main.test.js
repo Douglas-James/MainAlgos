@@ -1,6 +1,6 @@
 // all the import down here
 const { reverseString, addUpToFirst, addUpToSecond, logAtLeast5, logAtMost5, binarySearch, mergeSort, merge,
-  charCount
+  charCount, sameFrequency
 } = require('../index');
 const {performance} = require('perf_hooks');
 
@@ -114,6 +114,27 @@ test('charCount', () => {
   });
 });
 
+// sameFrequency test
+test('sameFrequency', () => {
+  const start = performance.now();
+  expect(sameFrequency([1, 2, 3], [4, 1, 9])).toBe(true);
+  const end = performance.now();
+  console.log(`sameFrequency Execution Time: ${(end - start).toFixed(3)}ms`);
+});
+
+test('sameFrequency', () => {
+  const start = performance.now();
+  expect(sameFrequency([1, 2, 3], [1, 9])).toBe(false);
+  const end = performance.now();
+  console.log(`sameFrequency Execution Time: ${(end - start).toFixed(3)}ms`);
+});
+
+test('sameFrequency', () => {
+  const start = performance.now();
+  expect(sameFrequency([1, 2, 1], [4, 4, 1])).toBe(false);
+  const end = performance.now();
+  console.log(`sameFrequency Execution Time: ${(end - start).toFixed(3)}ms`);
+});
 
 
 
