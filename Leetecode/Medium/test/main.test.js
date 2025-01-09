@@ -1,8 +1,6 @@
 // Import the function and ListNode class
-const { addTwoNumbers, ListNode,
-    lengthOfLongestSubstring, maxArea,
-    longestPalindrome, convert,
-    reverse, myAtoi, intToRoman} = require('../index');
+const { addTwoNumbers, ListNode, lengthOfLongestSubstring, maxArea,longestPalindrome, convert,
+    reverse, myAtoi, intToRoman, threeSumClosest} = require('../index');
 
 // Helper function to convert array to linked list
 function arrayToList(arr) {
@@ -151,4 +149,17 @@ test('Example 2: 4', () => {
 
 test('Example 3: 9', () => {
     expect(intToRoman(9)).toBe("IX");
+});
+
+// Test cases for sum_closest.js
+test('Example 1: nums = [-1,2,1,-4], target = 1', () => {
+    expect(threeSumClosest([-1, 2, 1, -4], 1)).toBe(2);
+});
+
+test('Example 2: nums = [0,0,0], target = 1', () => {
+    expect(threeSumClosest([0, 0, 0], 1)).toBe(0);
+});
+
+test('Example 3: nums = [0, 1, 2], target = 3', () => {
+    expect(threeSumClosest([0, 1, 2], 3)).toBe(3);
 });

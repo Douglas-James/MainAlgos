@@ -6,6 +6,7 @@ const convert = require('./zigzagConvertion');
 const reverse = require('./reverseInteger');
 const myAtoi = require('./stringtoInteger');
 const intToRoman = require('./Integertoroman');
+const {threeSumClosest} = require('./sum_closest');
 
 module.exports = {
   addTwoNumbers,
@@ -17,4 +18,5 @@ module.exports = {
   reverse,
   myAtoi,
   intToRoman,
+  threeSumClosest
 };
