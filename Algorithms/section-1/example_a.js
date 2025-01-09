@@ -1,6 +1,7 @@
 /*
  * Binary Search Implementation
  * Time Complexity: O(log n) - Binary search halves the search space at each step.
+ * logarithmic time complexity
  */
 
 const binarySearch = (arr, start, end, target) => {
@@ -24,6 +25,23 @@ const binarySearch = (arr, start, end, target) => {
   // Otherwise, search the right half of the array.
   return binarySearch(arr, midIndex + 1, end, target);
 };
+
+const logTimeFunction = (n) => {
+  let count = 0;
+  // Loop until n is greater than 1.
+  while (n > 1) {
+    n = Math.floor(n / 2); // Divide n by 2 at each step.
+    count++;
+  }
+  // Return the count of the number of times the loop ran.
+  return count;
+};
+
+// Input: 10 -> 5 -> 2 -> 1
+// Output: 3
+
+// console.log(logTimeFunction(10)); // 3
+// console.log(logTimeFunction(5)); // 2
 
 // Example usage:
 // const arr = [1, 2, 3, 4, 5, 6, 7, 8];

@@ -45,6 +45,21 @@ const sameFrequency = (arr1, arr2) => {
   return true;
 };
 
+// Not Fast Solution
+const sameFrequency_1 = (arr1, arr2) => {
+  if(arr1.length !== arr2.length) return false;
+
+  for(let i = 0; i < arr1.length; i++){
+    // check if the value of the first array squared is in the second array
+    let correctIndex = arr2.indexOf(arr1[i] ** 2); // the indexOf method returns the index of the value in the array it is nested looped in or -1 if the value is not in the array
+    if(correctIndex === -1) return false;
+    // remove the value from the second array
+    arr2.splice(correctIndex, 1); // splice method removes the value at the index passed as the first argument and the second argument is the number of values to remove
+  }
+
+  return true;
+};
+
 
 // You code here
 

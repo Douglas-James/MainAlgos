@@ -1,5 +1,5 @@
 /*
-* Write a funcation that accepts a string input,
+* Write a function that accepts a string input,
 * and returns the string in reverse copy
 */
 
@@ -61,10 +61,10 @@ function constantFun(arr) {
 
 /* function that 0(n^2) - quadratic time
 * nested loop that runs n * n times
-* cloumn and row
+* column and row
 */
 function square(n) {
-  // cloumn
+  // column
   for (let i = 0; i < n; i++) {
     // row
     for (let j = 0; j < n; j++) {
@@ -76,10 +76,10 @@ function square(n) {
 /*
 * cube function that runs 0(n^3) - cubic time
 * nested loop that runs n * n * n times
-* cloumn, row and height
+* column, row and height
 */
 function cube(n) {
-  // cloumn
+  // column
   for (let i = 0; i < n; i++) {
     // row
     for (let j = 0; j < n; j++) {
@@ -99,7 +99,7 @@ function cube(n) {
 * 2^3 = 8
 */
 function logFun(n){
-  // if the number n is eqaul to zero return string 'done'
+  // if the number n is equal to zero return string 'done'
   if (n === 0) return 'done';
   // divide the number n by 2
   n = Math.floor(n / 2);
@@ -118,6 +118,5 @@ function logn(n){
   }
   return n;
 }
-
 
 module.exports = {reverseString, addUpToFirst, addUpToSecond, logAtLeast5, logAtMost5};

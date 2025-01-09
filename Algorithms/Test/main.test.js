@@ -1,8 +1,9 @@
 // all the import down here
-const { reverseString, addUpToFirst, addUpToSecond, logAtLeast5, logAtMost5, binarySearch, mergeSort, merge,
-  charCount, sameFrequency
+const { reverseString, addUpToFirst, addUpToSecond, logAtLeast5, logAtMost5, binarySearch, mergeSort, merge, charCount, sameFrequency, collectOddValues, anagram
 } = require('../index');
 const {performance} = require('perf_hooks');
+
+
 
 // section 1  test file
 // example test
@@ -136,7 +137,36 @@ test('sameFrequency', () => {
   console.log(`sameFrequency Execution Time: ${(end - start).toFixed(3)}ms`);
 });
 
+// collectOddValues test
+test('collectOddValues', () => {
+  const start = performance.now();
+  const array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+  expect(collectOddValues(array)).toEqual([1, 3, 5, 7, 9]);
+  const end = performance.now();
+  console.log(`collectOddValues Execution Time: ${(end - start).toFixed(3)}ms`);
+});
 
+// anagram test
+test('anagram', () => {
+  const start = performance.now();
+  expect(anagram('hello', 'llohe')).toBe(true);
+  const end = performance.now();
+  console.log(`anagram Execution Time: ${(end - start).toFixed(3)}ms`);
+});
+
+test('anagram', () => {
+  const start = performance.now();
+  expect(anagram('car', 'rat')).toBe(false);
+  const end = performance.now();
+  console.log(`anagram Execution Time: ${(end - start).toFixed(3)}ms`);
+});
+
+test('anagram', () => {
+  const start = performance.now();
+  expect(anagram('', 'rac')).toBe(false);
+  const end = performance.now();
+  console.log(`anagram Execution Time: ${(end - start).toFixed(3)}ms`);
+});
 
 // section 3 test file
 

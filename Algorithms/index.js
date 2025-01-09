@@ -8,6 +8,8 @@ const {reverseString, addUpToFirst, addUpToSecond, logAtLeast5, logAtMost5} = re
 // section 2
 const {charCount} = require('./section-2/charCount');
 const {sameFrequency} = require('./section-2/sameFrequency');
+const { collectOddValues } = require('./section-2/collect_values');
+const {anagram} = require('./section-2/anagram');
 
 
 
@@ -52,6 +54,8 @@ module.exports = {
   // section 2
   charCount,
   sameFrequency,
+  collectOddValues,
+  anagram,
   // section 3
   // section 4
   // section 5
