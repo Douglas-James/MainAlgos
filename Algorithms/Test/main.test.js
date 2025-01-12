@@ -1,30 +1,43 @@
 // all the import down here
-const { reverseString, addUpToFirst, addUpToSecond, logAtLeast5, logAtMost5, binarySearch, mergeSort, merge, charCount, sameFrequency, collectOddValues, anagram
+const {
+  reverseString,
+  addUpToFirst,
+  addUpToSecond,
+  logAtLeast5,
+  logAtMost5,
+  binarySearch,
+  mergeSort,
+  merge,
+  charCount,
+  sameFrequency,
+  collectOddValues,
+  anagram,
+  sumZero,
+  maxSubarraySum,
+  binarySearch,
 } = require('../index');
-const {performance} = require('perf_hooks');
-
-
+const { performance } = require('perf_hooks');
 
 // section 1  test file
 // example test
 test('Example 1: "hello"', () => {
-    expect(reverseString("hello")).toBe("olleh");
+  expect(reverseString('hello')).toBe('olleh');
 });
 
 test('Example 2: "world"', () => {
-    expect(reverseString("world")).toBe("dlrow");
+  expect(reverseString('world')).toBe('dlrow');
 });
 
 test('Example 3: "racecar"', () => {
-    expect(reverseString("racecar")).toBe("racecar");
+  expect(reverseString('racecar')).toBe('racecar');
 });
 
 test('Example 4: "dog"', () => {
-    expect(reverseString("dog")).toBe("god");
+  expect(reverseString('dog')).toBe('god');
 });
 
 // addUpToFirst test
-test("addUpToFirst", () => {
+test('addUpToFirst', () => {
   const start = performance.now();
   expect(addUpToFirst(5000)).toBe(12502500);
   const end = performance.now();
@@ -32,7 +45,7 @@ test("addUpToFirst", () => {
 });
 
 // addUpToSecond test faster
-test("addUpToSecond", () => {
+test('addUpToSecond', () => {
   const start = performance.now();
   expect(addUpToSecond(5000)).toBe(12502500);
   const end = performance.now();
@@ -40,7 +53,7 @@ test("addUpToSecond", () => {
 });
 
 // logAtLeast5 test
-test("logAtLeast5", () => {
+test('logAtLeast5', () => {
   const start = performance.now();
   logAtLeast5(5);
   const end = performance.now();
@@ -48,7 +61,7 @@ test("logAtLeast5", () => {
 });
 
 // logAtMost5 test
-test("logAtMost5", () => {
+test('logAtMost5', () => {
   const start = performance.now();
   logAtMost5(5);
   const end = performance.now();
@@ -56,7 +69,7 @@ test("logAtMost5", () => {
 });
 
 // binarySearch test
-test("binarySearch", () => {
+test('binarySearch', () => {
   const start = performance.now();
   let arry = [1, 2, 3, 4, 5, 6, 7, 8];
   let starts = 0;
@@ -68,7 +81,7 @@ test("binarySearch", () => {
 });
 
 // second test binarySearch
-test("binarySearch", () => {
+test('binarySearch', () => {
   const start = performance.now();
   let arry = [1, 2, 3, 4, 5, 6, 7, 8];
   let starts = 0;
@@ -80,7 +93,7 @@ test("binarySearch", () => {
 });
 
 // example_b test
-test("mergeSort", () => {
+test('mergeSort', () => {
   const start = performance.now();
   let arry = [38, 27, 43, 3, 9, 82, 10];
   expect(mergeSort(arry)).toEqual([3, 9, 10, 27, 38, 43, 82]);
@@ -88,30 +101,29 @@ test("mergeSort", () => {
   console.log(`mergeSort Execution Time: ${(end - start).toFixed(3)}ms`);
 });
 
-
 // section 2 test file
 // charCount test
 test('charCount', () => {
-  expect(charCount("Hello World")).toEqual({
+  expect(charCount('Hello World')).toEqual({
     h: 1,
     e: 1,
     l: 3,
     o: 2,
     w: 1,
     r: 1,
-    d: 1
+    d: 1,
   });
 });
 
 test('charCount', () => {
-  expect(charCount("Hello World")).not.toEqual({
+  expect(charCount('Hello World')).not.toEqual({
     h: 1,
     e: 1,
     l: 3,
     o: 2,
     w: 1,
     r: 1,
-    d: 2
+    d: 2,
   });
 });
 
@@ -166,6 +178,41 @@ test('anagram', () => {
   expect(anagram('', 'rac')).toBe(false);
   const end = performance.now();
   console.log(`anagram Execution Time: ${(end - start).toFixed(3)}ms`);
+});
+
+// sumZero test
+test('sumZero', () => {
+  const start = performance.now();
+  expect(sumZero([-3, -2, -1, 0, 1, 2, 3])).toEqual([-3, 3]);
+  const end = performance.now();
+  console.log(`sumZero Execution Time: ${(end - start).toFixed(3)}ms`);
+});
+
+// maxSubarraySum test
+test('maxSubarraySum', () => {
+  const start = performance.now();
+  expect(maxSubarraySum([1, 2, 5, 2, 8, 1, 5], 2)).toBe(10);
+  const end = performance.now();
+  console.log(`maxSubarraySum Execution Time: ${(end - start).toFixed(3)}ms`);
+});
+
+test('maxSubarraySum', () => {
+  const start = performance.now();
+  expect(maxSubarraySum([0, 1, 2], 0)).toBe(3);
+  const end = performance.now();
+  console.log(`maxSubarraySum Execution Time: ${(end - start).toFixed(3)}ms`);
+});
+
+// binarySearch test
+test('binarySearch', () => {
+  const start = performance.now();
+  let arry = [1, 2, 3, 4, 5, 6, 7, 8];
+  let starts = 0;
+  let ends = arry.length - 1; // 7 index
+  let target = 10;
+  expect(binarySearch(arry, starts, ends, target)).toBe(false);
+  const end = performance.now();
+  console.log(`binarySearch Execution Time: ${(end - start).toFixed(3)}ms`);
 });
 
 // section 3 test file
