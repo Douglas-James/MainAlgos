@@ -37,18 +37,6 @@ const logTimeFunction = (n) => {
   return count;
 };
 
-// Input: 10 -> 5 -> 2 -> 1
-// Output: 3
-
-// console.log(logTimeFunction(10)); // 3
-// console.log(logTimeFunction(5)); // 2
-
-// Example usage:
-// const arr = [1, 2, 3, 4, 5, 6, 7, 8];
-// const target = 10;
-// console.log(binarySearch(arr, 0, arr.length - 1, target));
-
-// Export the function for testing or external use.
 module.exports = {
   binarySearch,
 };

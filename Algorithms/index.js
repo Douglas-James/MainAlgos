@@ -11,12 +11,17 @@ const {
 
 // section 2
 const { charCount } = require('./section-2/charCount');
-const { sameFrequency } = require('./section-2/sameFrequency');
+const {
+  sameFrequency,
+  sameFrequencyCounter,
+  areThereDuplicates,
+  averagePair,
+} = require('./section-2/sameFrequency');
 const { collectOddValues } = require('./section-2/collect_values');
 const { anagram } = require('./section-2/anagram');
 const { sumZero } = require('./section-2/sum_zero');
-const { maxSubarraySum } = require('./section-2/max_sum');
-const { binarySearch } = require('./section-2/divide_conquer');
+const { maxSubarraySum, minSubArrayLen } = require('./section-2/max_sum');
+const { binarySearchs } = require('./section-2/divide_conquer');
 
 // section 3
 
@@ -46,11 +51,15 @@ module.exports = {
   // section 2
   charCount,
   sameFrequency,
+  sameFrequencyCounter,
+  areThereDuplicates,
+  averagePair,
   collectOddValues,
   anagram,
   sumZero,
   maxSubarraySum,
-  binarySearch,
+  minSubArrayLen,
+  binarySearchs,
   // section 3
   // section 4
   // section 5

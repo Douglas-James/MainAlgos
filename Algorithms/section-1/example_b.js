@@ -22,9 +22,9 @@
   Space Complexity: O(n)
 
 */
-function mergeSort(arr){
+function mergeSort(arr) {
   // base case
-  if(arr.length <= 1){
+  if (arr.length <= 1) {
     return arr;
   }
   // find the middle index of the array
@@ -45,7 +45,7 @@ function mergeSort(arr){
   Space Complexity: O(n)
 */
 
-function merge(left, right){
+function merge(left, right) {
   // create an empty array to store the sorted elements
   let result = [];
 
@@ -54,11 +54,11 @@ function merge(left, right){
   let rightIndex = 0;
 
   // iterate through the left and right arrays
-  while(leftIndex < left.length && rightIndex < right.length){
-    if(left[leftIndex] < right[rightIndex]){
+  while (leftIndex < left.length && rightIndex < right.length) {
+    if (left[leftIndex] < right[rightIndex]) {
       result.push(left[leftIndex]);
       leftIndex++;
-    }else{
+    } else {
       result.push(right[rightIndex]);
       rightIndex++;
     }
@@ -109,10 +109,10 @@ function merge(left, right){
 //   }
 // }
 /*
-* two take a number and performance some operation
-* Time Complexity: O(2n)
-* Space Complexity: O(1)
-*/
+ * two take a number and performance some operation
+ * Time Complexity: O(2n)
+ * Space Complexity: O(1)
+ */
 // function two(n){
 //   // 0(n)
 //   for(let i = 0; i < n; i++){
@@ -127,10 +127,10 @@ function merge(left, right){
 // }
 
 /*
-* twoLoops function that takes two numbers a and b and performs some operation
-* Time Complexity: O(a + b)
-* Space Complexity: O(1)
-*/
+ * twoLoops function that takes two numbers a and b and performs some operation
+ * Time Complexity: O(a + b)
+ * Space Complexity: O(1)
+ */
 // function  twoLoops(a, b) {
 //   for(let i = 0; i < a; i++){
 //     // do something
@@ -143,10 +143,10 @@ function merge(left, right){
 // }
 
 /*
-* twoLoopsNested function that takes a number and b number and performs some operation
-* Time Complexity: O(a * b)
-* Space Complexity: O(1)
-*/
+ * twoLoopsNested function that takes a number and b number and performs some operation
+ * Time Complexity: O(a * b)
+ * Space Complexity: O(1)
+ */
 // function twoLoopsNested(a, b){
 //   // 0(a)
 //   for(let i = 0; i < a; i++){
@@ -160,10 +160,10 @@ function merge(left, right){
 // }
 
 /*
-* twoLoopsNested function that takes a is o(n2)
-* Time Complexity: O(n^2)
-* Space Complexity: O(1)
-*/
+ * twoLoopsNested function that takes a is o(n2)
+ * Time Complexity: O(n^2)
+ * Space Complexity: O(1)
+ */
 
 // function twoLoops(n){
 //   // 0(n)
@@ -177,9 +177,8 @@ function merge(left, right){
 //   // 0(n^2)
 // }
 
-
 // export all the functions
 module.exports = {
   mergeSort,
-  merge
+  merge,
 };

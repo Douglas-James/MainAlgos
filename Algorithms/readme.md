@@ -4,6 +4,8 @@
 
 Algorithms are step-by-step methods for solving problems. They are crucial in computer science for performing tasks efficiently.
 
+> **Notice:** This section is not completed yet. Please do not download the files until the repository is fully completed. Once the repository is complete, you will see the completed notice here.
+
 ## Types of Algorithms
 
 | **Category**        | **Description**                                                | **Examples**                                                                                              |
