@@ -15,13 +15,18 @@ const {
   sameFrequency,
   sameFrequencyCounter,
   areThereDuplicates,
-  averagePair,
 } = require('./section-2/sameFrequency');
 const { collectOddValues } = require('./section-2/collect_values');
 const { anagram } = require('./section-2/anagram');
 const { sumZero } = require('./section-2/sum_zero');
 const { maxSubarraySum, minSubArrayLen } = require('./section-2/max_sum');
 const { binarySearchs } = require('./section-2/divide_conquer');
+const { averagePair } = require('./section-2/averagePair');
+const { isSubsequence } = require('./section-2/isSubsequnce');
+const {
+  findLongestSubstring,
+  findLongestSubstringSlidingWindow,
+} = require('./section-2/findLongestSubstring');
 
 // section 3
 
@@ -54,12 +59,14 @@ module.exports = {
   sameFrequencyCounter,
   areThereDuplicates,
   averagePair,
+  isSubsequence,
   collectOddValues,
   anagram,
   sumZero,
   maxSubarraySum,
   minSubArrayLen,
   binarySearchs,
+  findLongestSubstringSlidingWindow,
   // section 3
   // section 4
   // section 5

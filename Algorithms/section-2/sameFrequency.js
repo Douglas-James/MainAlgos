@@ -144,47 +144,6 @@ const areThereDuplicates_2 = (...args) => {
   return new Set(args).size !== args.length;
 };
 
-// Average pair solution
-const averagePair = (arr, target) => {
-  let start = 0;
-  let end = arr.length - 1;
-
-  // loop through the array
-  while (start < end) {
-    // calculate the average of the values at the start and end pointers
-    let average = (arr[start] + arr[end]) / 2;
-
-    // if the average is the same as the target, return true
-    // if the average is less than the target, increment the start pointer
-    // if the average is greater than the target, decrement the end pointer
-    if (average === target) return true;
-    if (average < target) start++;
-    if (average > target) end--;
-  }
-
-  // if the condition is not met, return false
-  return false;
-};
-
-const isSubsequence = (str1, str2) => {
-  // Base case
-  if (str1.length !== str2.length) return true;
-
-  let i = 0;
-  let j = 0;
-
-  // loop through the second string
-  while (j < str2.length) {
-    // if the value of the first string is the same as the value of the second string, increment the first pointer
-    // if the first pointer is equal to the length of the first string, return true
-    if (str1[i] === str2[j]) i++;
-    if (i === str1.length) return true;
-    j++;
-  }
-
-  return false;
-};
-
 // console.log(sameFrequencyCounter(182, 281)); // Output: true
 // console.log(sameFrequencyCounter(34, 14)); // Output: false
 // console.log(sameFrequencyCounter(3589578, 5879385)); // Output: true
@@ -198,6 +157,4 @@ module.exports = {
   sameFrequency,
   sameFrequencyCounter,
   areThereDuplicates,
-  averagePair,
-  isSubsequence,
 };

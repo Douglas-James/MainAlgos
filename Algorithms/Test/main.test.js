@@ -17,8 +17,10 @@ const {
   anagram,
   sumZero,
   maxSubarraySum,
+  isSubsequence,
   minSubArrayLen,
   binarySearchs,
+  findLongestSubstringSlidingWindow,
 } = require('../index');
 const { performance } = require('perf_hooks');
 
@@ -337,6 +339,62 @@ test('minSubArrayLen', () => {
   expect(minSubArrayLen([3, 1, 7, 11, 2, 9, 8, 21, 62, 33, 19], 52)).toBe(1);
   const end = performance.now();
   console.log(`minSubArrayLen Execution Time: ${(end - start).toFixed(3)}ms`);
+});
+
+// isSubsequence test
+test('isSubsequence', () => {
+  const start = performance.now();
+  expect(isSubsequence('hello', 'hello world')).toBe(true);
+  const end = performance.now();
+  console.log(`isSubsequence Execution Time: ${(end - start).toFixed(3)}ms`);
+});
+
+test('isSubsequence', () => {
+  const start = performance.now();
+  expect(isSubsequence('sing', 'sting')).toBe(true);
+  const end = performance.now();
+  console.log(`isSubsequence Execution Time: ${(end - start).toFixed(3)}ms`);
+});
+
+test('isSubsequence', () => {
+  const start = performance.now();
+  expect(isSubsequence('abc', 'acb')).toBe(false);
+  const end = performance.now();
+  console.log(`isSubsequence Execution Time: ${(end - start).toFixed(3)}ms`);
+});
+
+// find longest substring test
+test('findLongestSubstringSlidingWindow', () => {
+  const start = performance.now();
+  expect(findLongestSubstringSlidingWindow('')).toBe(0);
+  const end = performance.now();
+  console.log(
+    `findLongestSubstringSlidingWindow Execution Time: ${(end - start).toFixed(
+      3,
+    )}ms`,
+  );
+});
+
+test('findLongestSubstringSlidingWindow', () => {
+  const start = performance.now();
+  expect(findLongestSubstringSlidingWindow('rithmschool')).toBe(7);
+  const end = performance.now();
+  console.log(
+    `findLongestSubstringSlidingWindow Execution Time: ${(end - start).toFixed(
+      3,
+    )}ms`,
+  );
+});
+
+test('findLongestSubstringSlidingWindow', () => {
+  const start = performance.now();
+  expect(findLongestSubstringSlidingWindow('longestsubstring')).toBe(8);
+  const end = performance.now();
+  console.log(
+    `findLongestSubstringSlidingWindow Execution Time: ${(end - start).toFixed(
+      3,
+    )}ms`,
+  );
 });
 
 // section 3 test file
