@@ -21,8 +21,21 @@ function search(arr, target) {
 // console.log(search(arr, 10)); // -1
 
 // refactored solution
-//Time complexity: O(log n) logarithmic time complexity
-// On Section 1 example_a.js there is a similar function
+/*
+ * Binary Search Implementation
+ * Time Complexity: O(log n) - Binary search halves the search space at each step.
+ * logarithmic time complexity
+ * Example of Binary search: the number is 7
+ * let say that you guessing a number 1 through 10.
+ * let say there you have array of numbers [1-10]
+ * [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+ *  0, 1, 2, 3, 4, 5, 6, 7, 8, 9 = index
+ * Binary search takes sorted array, and a target value and return index value or target value not find returns -1  depending on the target value.
+ * is 5 the answer which is index of 4. no. then is it greater then 5 or less.
+ * greater then 5 so we need middle index of that which is 7 = 8 value.
+ * is 8 the answer no, it less so it get the middle index which is 5 = 6
+ * so it must be 6 index which is the answer. return true
+ */
 function binarySearchs(arr, target) {
   let min = 0;
   let max = arr.length - 1;
@@ -48,7 +61,7 @@ function binarySearchs(arr, target) {
   return -1;
 }
 
-const arrys = [1, 2, 3, 4, 5, 6, 7, 8];
+let arrys = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 console.log(binarySearchs(arrys, 7)); // 6 index
 
 module.exports = {
