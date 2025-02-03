@@ -21,6 +21,18 @@ const {
   minSubArrayLen,
   binarySearchs,
   findLongestSubstringSlidingWindow,
+  factorial,
+  productOfArray,
+  recursiveRange,
+  fib,
+  reverse,
+  isPalindrome,
+  someRecursive,
+  flatten,
+  capitalizeFirst,
+  nestedEvenSum,
+  capitalizeWords,
+  stringifyNumbers,
 } = require('../index');
 const { performance } = require('perf_hooks');
 
@@ -395,6 +407,186 @@ test('findLongestSubstringSlidingWindow', () => {
       3,
     )}ms`,
   );
+});
+
+// factorial test
+test('factorial', () => {
+  const start = performance.now();
+  expect(factorial(5)).toBe(120);
+  const end = performance.now();
+  console.log(`factorial Execution Time: ${(end - start).toFixed(3)}ms`);
+});
+
+// productOfArray test
+test('productOfArray', () => {
+  const start = performance.now();
+  expect(productOfArray([1, 2, 3])).toBe(6);
+  const end = performance.now();
+  console.log(`productOfArray Execution Time: ${(end - start).toFixed(3)}ms`);
+});
+
+// recursiveRange test
+test('recursiveRange', () => {
+  const start = performance.now();
+  expect(recursiveRange(6)).toBe(21);
+  const end = performance.now();
+  console.log(`recursiveRange Execution Time: ${(end - start).toFixed(3)}ms`);
+});
+
+// fib test
+test('fib', () => {
+  const start = performance.now();
+  expect(fib(4)).toBe(3);
+  const end = performance.now();
+  console.log(`fib Execution Time: ${(end - start).toFixed(3)}ms`);
+});
+
+test('fib', () => {
+  const start = performance.now();
+  expect(fib(10)).toBe(55);
+  const end = performance.now();
+  console.log(`fib Execution Time: ${(end - start).toFixed(3)}ms`);
+});
+
+// reverse test
+test('reverse', () => {
+  const start = performance.now();
+  expect(reverse('hello')).toBe('olleh');
+  const end = performance.now();
+  console.log(`reverse Execution Time: ${(end - start).toFixed(3)}ms`);
+});
+
+// isPalindrome test
+test('isPalindrome', () => {
+  const start = performance.now();
+  expect(isPalindrome('racecar')).toBe(true);
+  const end = performance.now();
+  console.log(`isPalindrome Execution Time: ${(end - start).toFixed(3)}ms`);
+});
+
+test('isPalindrome', () => {
+  const start = performance.now();
+  expect(isPalindrome('hello')).toBe(false);
+  const end = performance.now();
+  console.log(`isPalindrome Execution Time: ${(end - start).toFixed(3)}ms`);
+});
+
+// someRecursive test
+test('someRecursive', () => {
+  const start = performance.now();
+  expect(someRecursive([1, 2, 3, 4], (val) => val % 2 !== 0)).toBe(true);
+  const end = performance.now();
+  console.log(`someRecursive Execution Time: ${(end - start).toFixed(3)}ms`);
+});
+
+// flatten test
+test('flatten', () => {
+  const start = performance.now();
+  expect(flatten([1, 2, 3, [4, 5]])).toEqual([1, 2, 3, 4, 5]);
+  const end = performance.now();
+  console.log(`flatten Execution Time: ${(end - start).toFixed(3)}ms`);
+});
+
+test('flatten', () => {
+  const start = performance.now();
+  expect(flatten([1, [2, [3, 4], [[5]]]])).toEqual([1, 2, 3, 4, 5]);
+  const end = performance.now();
+  console.log(`flatten Execution Time: ${(end - start).toFixed(3)}ms`);
+});
+
+// capitalizeFirst test
+test('capitalizeFirst', () => {
+  const start = performance.now();
+  expect(capitalizeFirst(['car', 'taco', 'banana'])).toEqual([
+    'Car',
+    'Taco',
+    'Banana',
+  ]);
+  const end = performance.now();
+  console.log(`capitalizeFirst Execution Time: ${(end - start).toFixed(3)}ms`);
+});
+
+test('capitalizeFirst', () => {
+  const start = performance.now();
+  expect(capitalizeFirst(['tomato', 'apple', 'avocado'])).not.toEqual([
+    'tomato',
+    'apple',
+    'avocado',
+  ]);
+  const end = performance.now();
+  console.log(`capitalizeFirst Execution Time: ${(end - start).toFixed(3)}ms`);
+});
+
+// nestedEvenSum test
+test('nestedEvenSum', () => {
+  const start = performance.now();
+  var obj1 = {
+    outer: 2,
+    obj: {
+      inner: 2,
+      otherObj: {
+        superInner: 2,
+        notANumber: true,
+        alsoNotANumber: 'yup',
+      },
+    },
+  };
+
+  var obj2 = {
+    a: 2,
+    b: { b: 2, bb: { b: 3, bb: { b: 2 } } },
+    c: { c: { c: 2 }, cc: 'ball', ccc: 5 },
+    d: 1,
+    e: { e: { e: 2 }, ee: 'car' },
+  };
+
+  expect(nestedEvenSum(obj1)).toBe(6);
+  expect(nestedEvenSum(obj2)).toBe(10);
+  const end = performance.now();
+  console.log(`nestedEvenSum Execution Time: ${(end - start).toFixed(3)}ms`);
+});
+
+// capitalizeWords test
+test('capitalizeWords', () => {
+  const start = performance.now();
+  expect(capitalizeWords(['i', 'am', 'learning', 'recursion'])).toEqual([
+    'I',
+    'AM',
+    'LEARNING',
+    'RECURSION',
+  ]);
+  const end = performance.now();
+  console.log(`capitalizeWords Execution Time: ${(end - start).toFixed(3)}ms`);
+});
+
+// stringifyNumbers test
+test('stringifyNumbers', () => {
+  const start = performance.now();
+  expect(
+    stringifyNumbers({
+      num: 1,
+      test: [],
+      data: {
+        val: 4,
+        info: {
+          isRight: true,
+          random: 66,
+        },
+      },
+    }),
+  ).toEqual({
+    num: '1',
+    test: [],
+    data: {
+      val: '4',
+      info: {
+        isRight: true,
+        random: '66',
+      },
+    },
+  });
+  const end = performance.now();
+  console.log(`stringifyNumbers Execution Time: ${(end - start).toFixed(3)}ms`);
 });
 
 // section 3 test file

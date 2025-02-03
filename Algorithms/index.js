@@ -16,7 +16,7 @@ const {
   sameFrequencyCounter,
   areThereDuplicates,
 } = require('./section-2/sameFrequency');
-const { collectOddValues } = require('./section-2/collect_values');
+const { collectOddValues } = require('./section-2/recursive/helperRecursion');
 const { anagram } = require('./section-2/anagram');
 const { sumZero } = require('./section-2/sum_zero');
 const { maxSubarraySum, minSubArrayLen } = require('./section-2/max_sum');
@@ -27,6 +27,18 @@ const {
   findLongestSubstring,
   findLongestSubstringSlidingWindow,
 } = require('./section-2/findLongestSubstring');
+const { factorial } = require('./section-2/recursive/factorial');
+const { productOfArray } = require('./section-2/recursive/product');
+const { recursiveRange } = require('./section-2/recursive/recursive_range');
+const { fib } = require('./section-2/recursive/fib');
+const { reverse } = require('./section-2/recursive/reverse_string');
+const { isPalindrome } = require('./section-2/recursive/isPalindrome');
+const { someRecursive } = require('./section-2/recursive/some_recursive');
+const { flatten } = require('./section-2/recursive/flatten');
+const { capitalizeFirst } = require('./section-2/recursive/capitalizeFirst');
+const { nestedEvenSum } = require('./section-2/recursive/nestedEvenSum');
+const { capitalizeWords } = require('./section-2/recursive/capitalizeWords');
+const { stringifyNumbers } = require('./section-2/recursive/stringifyNumber');
 
 // section 3
 
@@ -67,6 +79,18 @@ module.exports = {
   minSubArrayLen,
   binarySearchs,
   findLongestSubstringSlidingWindow,
+  factorial,
+  productOfArray,
+  recursiveRange,
+  fib,
+  reverse,
+  isPalindrome,
+  someRecursive,
+  flatten,
+  capitalizeFirst,
+  nestedEvenSum,
+  capitalizeWords,
+  stringifyNumbers,
   // section 3
   // section 4
   // section 5
