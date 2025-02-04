@@ -33,6 +33,7 @@ const {
   nestedEvenSum,
   capitalizeWords,
   stringifyNumbers,
+  collectStrings,
 } = require('../index');
 const { performance } = require('perf_hooks');
 
@@ -587,6 +588,53 @@ test('stringifyNumbers', () => {
   });
   const end = performance.now();
   console.log(`stringifyNumbers Execution Time: ${(end - start).toFixed(3)}ms`);
+});
+
+// collectStrings test
+test('collectStrings', () => {
+  const start = performance.now();
+  expect(
+    collectStrings({
+      stuff: 'foo',
+      data: {
+        val: {
+          thing: {
+            info: 'bar',
+            moreInfo: {
+              evenMoreInfo: {
+                weMadeIt: 'baz',
+              },
+            },
+          },
+        },
+      },
+    }),
+  ).toEqual(['foo', 'bar', 'baz']);
+  const end = performance.now();
+  console.log(`collectStrings Execution Time: ${(end - start).toFixed(3)}ms`);
+});
+
+test('collectStrings', () => {
+  const start = performance.now();
+  expect(
+    collectStrings({
+      stuff: 'foo',
+      data: {
+        val: {
+          thing: {
+            info: 'bar',
+            moreInfo: {
+              evenMoreInfo: {
+                weMadeIt: 'baz',
+              },
+            },
+          },
+        },
+      },
+    }),
+  ).not.toEqual(['foo', 'bar', 'baz', 'foo']);
+  const end = performance.now();
+  console.log(`collectStrings Execution Time: ${(end - start).toFixed(3)}ms`);
 });
 
 // section 3 test file
