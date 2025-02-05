@@ -1,4 +1,4 @@
-// wrute function called collectStrings. Given an object, return an array of all the values in the object that are strings.
+// write function called collectStrings. Given an object, return an array of all the values in the object that are strings.
 
 const collectStrings = (obj) => {
   // create an array to store the strings

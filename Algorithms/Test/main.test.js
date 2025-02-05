@@ -34,6 +34,7 @@ const {
   capitalizeWords,
   stringifyNumbers,
   collectStrings,
+  linearSearch,
 } = require('../index');
 const { performance } = require('perf_hooks');
 
@@ -637,6 +638,30 @@ test('collectStrings', () => {
   console.log(`collectStrings Execution Time: ${(end - start).toFixed(3)}ms`);
 });
 
+// linearSearch test
+test('linearSearch', () => {
+  const start = performance.now();
+  let arry = [1, 2, 3, 4, 5, 6, 7, 8];
+  expect(linearSearch(arry, 10)).toBe(-1);
+  const end = performance.now();
+  console.log(`linearSearch Execution Time: ${(end - start).toFixed(3)}ms`);
+});
+
+test('linearSearch', () => {
+  const start = performance.now();
+  let arry = [1, 2, 3, 4, 5, 6, 7, 8];
+  expect(linearSearch(arry, 5)).toBe(4);
+  const end = performance.now();
+  console.log(`linearSearch Execution Time: ${(end - start).toFixed(3)}ms`);
+});
+
+test('linearSearch', () => {
+  const start = performance.now();
+  let arry = [100];
+  expect(linearSearch(arry, 1)).toBe(-1);
+  const end = performance.now();
+  console.log(`linearSearch Execution Time: ${(end - start).toFixed(3)}ms`);
+});
 // section 3 test file
 
 // section 4 test file

@@ -40,6 +40,7 @@ const { nestedEvenSum } = require('./section-2/recursive/nestedEvenSum');
 const { capitalizeWords } = require('./section-2/recursive/capitalizeWords');
 const { stringifyNumbers } = require('./section-2/recursive/stringifyNumber');
 const { collectStrings } = require('./section-2/recursive/collectStrings');
+const { linearSearch } = require('./section-2/Search/linear_search');
 // section 3
 
 // section 4
@@ -92,6 +93,7 @@ module.exports = {
   capitalizeWords,
   stringifyNumbers,
   collectStrings,
+  linearSearch,
   // section 3
   // section 4
   // section 5

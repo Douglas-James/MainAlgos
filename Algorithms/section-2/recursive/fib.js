@@ -9,6 +9,9 @@ const fib = (n) => {
   return fib(n - 1) + fib(n - 2);
 };
 
+// test case
+console.log(fib(4)); // 3
+
 module.exports = {
   fib,
 };
