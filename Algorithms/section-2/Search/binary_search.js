@@ -19,18 +19,13 @@ const mainBinarySearch = (arr, target) => {
     // Calculate the middle index
     let mid = Math.floor((left + right) / 2);
 
-    // If the target value is middle element, return the middle index
-    // If the target value is less than the middle element, search in the left half of the array
-    // If the target value is greater than the middle element, search in the right half of the array
-    // Continue the search until the target value is found or the search range is empty
+    // If the target value is found, return the index of the target value
     if (arr[mid] === target) {
       return mid;
     } else if (arr[mid] < target) {
-      // Search in the right half of the array
-      left = mid + 1;
+      left = mid + 1; // Search in the right half of the array
     } else {
-      // Search in the left half of the array
-      right = mid - 1;
+      right = mid - 1; // Search in the left half of the array
     }
   }
 
