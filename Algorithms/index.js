@@ -41,6 +41,7 @@ const { capitalizeWords } = require('./section-2/recursive/capitalizeWords');
 const { stringifyNumbers } = require('./section-2/recursive/stringifyNumber');
 const { collectStrings } = require('./section-2/recursive/collectStrings');
 const { linearSearch } = require('./section-2/Search/linear_search');
+const { mainBinarySearch } = require('./section-2/Search/binary_search');
 // section 3
 
 // section 4
@@ -94,6 +95,7 @@ module.exports = {
   stringifyNumbers,
   collectStrings,
   linearSearch,
+  mainBinarySearch,
   // section 3
   // section 4
   // section 5

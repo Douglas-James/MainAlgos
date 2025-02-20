@@ -5,7 +5,7 @@ const {
   addUpToSecond,
   logAtLeast5,
   logAtMost5,
-  binarySearch,
+  // binarySearch,
   mergeSort,
   merge,
   charCount,
@@ -19,7 +19,7 @@ const {
   maxSubarraySum,
   isSubsequence,
   minSubArrayLen,
-  binarySearchs,
+  // binarySearchs,
   findLongestSubstringSlidingWindow,
   factorial,
   productOfArray,
@@ -35,6 +35,7 @@ const {
   stringifyNumbers,
   collectStrings,
   linearSearch,
+  mainBinarySearch,
 } = require('../index');
 const { performance } = require('perf_hooks');
 
@@ -231,13 +232,13 @@ test('maxSubarraySum', () => {
 });
 
 // binarySearchs test
-test('binarySearchs', () => {
-  const start = performance.now();
-  let arry = [1, 2, 3, 4, 5, 6, 7, 8];
-  expect(binarySearchs(arry, 7)).toBe(6);
-  const end = performance.now();
-  console.log(`binarySearchs Execution Time: ${(end - start).toFixed(3)}ms`);
-});
+// test('binarySearchs', () => {
+//   const start = performance.now();
+//   let arry = [1, 2, 3, 4, 5, 6, 7, 8];
+//   expect(binarySearchs(arry, 7)).toBe(6);
+//   const end = performance.now();
+//   console.log(`binarySearchs Execution Time: ${(end - start).toFixed(3)}ms`);
+// });
 
 // frequency counter test
 test('sameFrequencyCounter', () => {
@@ -661,6 +662,23 @@ test('linearSearch', () => {
   expect(linearSearch(arry, 1)).toBe(-1);
   const end = performance.now();
   console.log(`linearSearch Execution Time: ${(end - start).toFixed(3)}ms`);
+});
+
+// binary search test
+test('mainBinarySearch', () => {
+  const start = performance.now();
+  let arry = [1, 2, 3, 4, 5, 6, 7, 8];
+  expect(mainBinarySearch(arry, 10)).toBe(-1);
+  const end = performance.now();
+  console.log(`mainBinarySearch Execution Time: ${(end - start).toFixed(3)}ms`);
+});
+
+test('mainBinarySearch', () => {
+  const start = performance.now();
+  let arry = [1, 2, 3, 4, 5, 6, 7, 8];
+  expect(mainBinarySearch(arry, 5)).toBe(4);
+  const end = performance.now();
+  console.log(`mainBinarySearch Execution Time: ${(end - start).toFixed(3)}ms`);
 });
 // section 3 test file
 
