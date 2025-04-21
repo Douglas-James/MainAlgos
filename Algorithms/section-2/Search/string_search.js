@@ -8,10 +8,12 @@
 6. Return the count
 */
 function naiveStringSearch(long, short) {
-  let count = 0;
+  // Checking the length of the strings
   if (short.length > long.length) {
     return 0;
   }
+  // Counter for the number of matches
+  let count = 0;
   // Loop through the long string
   for (let i = 0; i < long.length; i++) {
     // Loop through the short string
@@ -26,6 +28,7 @@ function naiveStringSearch(long, short) {
       }
     }
   }
+  // Return the count
   return count;
 }
 
