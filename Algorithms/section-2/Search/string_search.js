@@ -35,3 +35,5 @@ function naiveStringSearch(long, short) {
 // Test cases
 console.log(naiveStringSearch('hello', 'll')); // 1
 console.log(naiveStringSearch('momagaagshksdakaf', 'ga')); // 1
+console.log(naiveStringSearch('lorie loled', 'lo')); // 2
+console.log(naiveStringSearch('aaaaa', 'a')); // 5
