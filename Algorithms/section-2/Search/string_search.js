@@ -33,7 +33,48 @@ function naiveStringSearch(long, short) {
 }
 
 // Test cases
-console.log(naiveStringSearch('hello', 'll')); // 1
-console.log(naiveStringSearch('momagaagshksdakaf', 'ga')); // 1
-console.log(naiveStringSearch('lorie loled', 'lo')); // 2
-console.log(naiveStringSearch('aaaaa', 'a')); // 5
+// console.log(naiveStringSearch('hello', 'll')); // 1
+// console.log(naiveStringSearch('momagaagshksdakaf', 'ga')); // 1
+// console.log(naiveStringSearch('lorie loled', 'lo')); // 2
+// console.log(naiveStringSearch('aaaaa', 'a')); // 5
+
+// Recursive String Search Algorithm
+/* == Pseudocode ==
+1. Check if the short string is empty
+2. Check if the long string is empty
+3. Check if the short string is longer than the long string
+4. Check if the first character of the long string matches the first character of the short string
+5. If it matches, check the rest of the strings
+6. If it doesn't match, check the rest of the long string
+7. Return the count
+*/
+
+function recursiveStringSearch(long, short) {
+  // Check if the short string is empty
+  if (short.length === 0) {
+    return 0;
+  }
+  // Check if the long string is empty
+  if (long.length === 0) {
+    return 0;
+  }
+  // Check if the short string is longer than the long string
+  if (short.length > long.length) {
+    return 0;
+  }
+  // Check if the first character of the long string matches the first character of the short string
+  if (long.startsWith(short)) {
+    // If the long string starts with the short string, increment the count and check the rest
+    return 1 + recursiveStringSearch(long.slice(1), short);
+  } else {
+    // If it doesn't match, check the rest of the long string
+    return recursiveStringSearch(long.slice(1), short);
+  }
+}
+
+// Test cases
+console.log(recursiveStringSearch('hello', 'll')); // 2
+console.log(recursiveStringSearch('momagaagshksdakaf', 'ga')); // 1
+console.log(recursiveStringSearch('lorie loled', 'lo')); // 2
+console.log(recursiveStringSearch('aaaaa', 'a')); // 5
+console.log(recursiveStringSearch('aaaaa', 'aa')); // 4
