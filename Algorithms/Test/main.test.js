@@ -5,7 +5,6 @@ const {
   addUpToSecond,
   logAtLeast5,
   logAtMost5,
-  // binarySearch,
   mergeSort,
   merge,
   charCount,
@@ -19,7 +18,6 @@ const {
   maxSubarraySum,
   isSubsequence,
   minSubArrayLen,
-  // binarySearchs,
   findLongestSubstringSlidingWindow,
   factorial,
   productOfArray,
@@ -36,6 +34,8 @@ const {
   collectStrings,
   linearSearch,
   mainBinarySearch,
+  recursiveStringSearch,
+  naiveStringSearch,
 } = require('../index');
 const { performance } = require('perf_hooks');
 
@@ -679,6 +679,59 @@ test('mainBinarySearch', () => {
   expect(mainBinarySearch(arry, 5)).toBe(4);
   const end = performance.now();
   console.log(`mainBinarySearch Execution Time: ${(end - start).toFixed(3)}ms`);
+});
+
+// naiveStringSearch test
+test('naiveStringSearch', () => {
+  const start = performance.now();
+  expect(naiveStringSearch('momagaagshksdakaf', 'ga')).toBe(1);
+  const end = performance.now();
+  console.log(
+    `naiveStringSearch Execution Time: ${(end - start).toFixed(3)}ms`,
+  );
+});
+test('naiveStringSearch', () => {
+  const start = performance.now();
+  expect(naiveStringSearch('momagaagshksdakaf', 'ga')).not.toBe(2);
+  const end = performance.now();
+  console.log(
+    `naiveStringSearch Execution Time: ${(end - start).toFixed(3)}ms`,
+  );
+});
+
+test('naiveStringSearch', () => {
+  const start = performance.now();
+  expect(naiveStringSearch('lorie loled', 'lol')).toBe(1);
+  const end = performance.now();
+  console.log(
+    `naiveStringSearch Execution Time: ${(end - start).toFixed(3)}ms`,
+  );
+});
+// recursiveStringSearch test
+test('recursiveStringSearch', () => {
+  const start = performance.now();
+  expect(recursiveStringSearch('momagaagshksdakaf', 'ga')).toBe(1);
+  const end = performance.now();
+  console.log(
+    `recursiveStringSearch Execution Time: ${(end - start).toFixed(3)}ms`,
+  );
+});
+test('recursiveStringSearch', () => {
+  const start = performance.now();
+  expect(recursiveStringSearch('momagaagshksdakaf', 'ga')).not.toBe(2);
+  const end = performance.now();
+  console.log(
+    `recursiveStringSearch Execution Time: ${(end - start).toFixed(3)}ms`,
+  );
+});
+
+test('recursiveStringSearch', () => {
+  const start = performance.now();
+  expect(recursiveStringSearch('lorie loled', 'lol')).toBe(1);
+  const end = performance.now();
+  console.log(
+    `recursiveStringSearch Execution Time: ${(end - start).toFixed(3)}ms`,
+  );
 });
 // section 3 test file
 

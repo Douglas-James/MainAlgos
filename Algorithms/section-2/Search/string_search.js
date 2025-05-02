@@ -1,5 +1,4 @@
-// Naive String Search Algorithm
-/* == Pseudocode ==
+/* == Naive Pseudocode ==
 1. Loop through the long string
 2. Loop through the short string
 3. If the characters don't match, break out of the inner loop
@@ -33,13 +32,10 @@ function naiveStringSearch(long, short) {
 }
 
 // Test cases
-// console.log(naiveStringSearch('hello', 'll')); // 1
-// console.log(naiveStringSearch('momagaagshksdakaf', 'ga')); // 1
-// console.log(naiveStringSearch('lorie loled', 'lo')); // 2
-// console.log(naiveStringSearch('aaaaa', 'a')); // 5
+console.log(naiveStringSearch('momagaagshksdakaf', 'ga')); // 1
 
 // Recursive String Search Algorithm
-/* == Pseudocode ==
+/* == Recursive Pseudocode ==
 1. Check if the short string is empty
 2. Check if the long string is empty
 3. Check if the short string is longer than the long string
@@ -72,9 +68,10 @@ function recursiveStringSearch(long, short) {
   }
 }
 
-// Test cases
-console.log(recursiveStringSearch('hello', 'll')); // 2
-console.log(recursiveStringSearch('momagaagshksdakaf', 'ga')); // 1
-console.log(recursiveStringSearch('lorie loled', 'lo')); // 2
-console.log(recursiveStringSearch('aaaaa', 'a')); // 5
-console.log(recursiveStringSearch('aaaaa', 'aa')); // 4
+console.log(recursiveStringSearch('aaaaa', 'aa')); // Expected: 4
+
+// Export the functions
+module.exports = {
+  naiveStringSearch,
+  recursiveStringSearch,
+};
