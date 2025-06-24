@@ -63,10 +63,10 @@ function minSubArrayLen(nums, target) {
   return minLen === Infinity ? 0 : minLen;
 }
 
-console.log(maxSubarraySum([1, 2, 5, 2, 8, 1, 5], 2)); // Output: 10 (8 + 2)
-console.log(maxSubarraySum([1, 2, 5, 2, 8, 1, 5], 4)); // Output: 17 (5 + 2 + 8 + 2)
-console.log(maxSubarraySum([4, 2, 1, 6], 1)); // Output: 6
-console.log(maxSubarraySum([], 4)); // Output: null
+// console.log(maxSubarraySum([1, 2, 5, 2, 8, 1, 5], 2)); // Output: 10 (8 + 2)
+// console.log(maxSubarraySum([1, 2, 5, 2, 8, 1, 5], 4)); // Output: 17 (5 + 2 + 8 + 2)
+// console.log(maxSubarraySum([4, 2, 1, 6], 1)); // Output: 6
+// console.log(maxSubarraySum([], 4)); // Output: null
 module.exports = {
   maxSubarraySum,
   minSubArrayLen,

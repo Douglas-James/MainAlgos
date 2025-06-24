@@ -10,6 +10,4 @@ const someRecursive = (arr, cb) => {
   return someRecursive(arr.slice(1), cb);
 };
 
-module.exports = {
-  someRecursive,
-};
+module.exports = someRecursive;

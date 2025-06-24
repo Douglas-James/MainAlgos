@@ -42,7 +42,7 @@ function sumRange(num) {
 // sumRange(4) = 4 + sumRange(3) = 4 + 3 + sumRange(2) = 4 + 3 + 2 + sumRange(1) = 4 + 3 + 2 + 1 = 10
 
 // Test cases
-console.log(sumRange(3)); // 6
+// console.log(sumRange(3)); // 6
 
 module.exports = {
   sumZero,

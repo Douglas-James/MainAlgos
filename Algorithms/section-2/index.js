@@ -1,37 +1,47 @@
 /*
-===========================================
-||  Exporting all algorithms for testing ||
-===========================================
+=======================================
+|| Exported from: Selection 2 Folder ||
+=======================================
 */
+
+const anagram = require("./anagram");
+const averagePair = require("./averagePair");
+const charCount = require("./charCount");
 const {
-  anagram,
-  averagePair,
-  charCount,
   findLongestSubstring,
   findLongestSubstringSlidingWindow,
-  isSubsequence,
-  isSubsequenceRecursive,
-  maxSubarraySum,
-  minSubArrayLen,
+} = require("./findLongestSubstring");
+const { isSubsequence, isSubsequenceRecursive } = require("./isSubsequnce");
+const { maxSubarraySum, minSubArrayLen } = require("./max_sum");
+const {
   sameFrequency,
   sameFrequencyCounter,
   areThereDuplicates,
+} = require("./sameFrequency");
+
+const {
   fib,
   factorial,
   isPalindrome,
   nestedEvenSum,
   reverse,
   stringifyNumbers,
+} = require("./recursive");
+
+const {
   naiveStringSearch,
   recursiveStringSearch,
   binarySearchs,
   linearSearch,
+} = require("./Search");
+
+const {
   bubbleSortOptimized,
   bubbleSortUnoptimized,
   quickSort,
   bubbleSortObj,
   selectionSort,
-} = require("./section-2/index");
+} = require("./Sort");
 
 module.exports = {
   anagram,
@@ -46,6 +56,7 @@ module.exports = {
   sameFrequency,
   sameFrequencyCounter,
   areThereDuplicates,
+  minSubArrayLen,
   fib,
   factorial,
   isPalindrome,

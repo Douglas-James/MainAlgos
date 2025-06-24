@@ -6,3 +6,5 @@ const exponential = (n) => {
   }
   return 2 * exponential(n - 1);
 }
+
+module.exports = exponential;

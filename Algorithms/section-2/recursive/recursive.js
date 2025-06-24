@@ -15,11 +15,11 @@ const evenArray = (arr) => {
 };
 
 // Test cases
-console.log(evenArray([1, 2, 3, 4, 5])); // [2, 4]
-console.log(evenArray([2, 4, 6, 8, 10])); // [2, 4, 6, 8, 10]
-console.log(evenArray([1, 3, 5, 7, 9])); // []
-console.log(evenArray([])); // []
-console.log(evenArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])); // [2, 4, 6, 8, 10]
+// console.log(evenArray([1, 2, 3, 4, 5])); // [2, 4]
+// console.log(evenArray([2, 4, 6, 8, 10])); // [2, 4, 6, 8, 10]
+// console.log(evenArray([1, 3, 5, 7, 9])); // []
+// console.log(evenArray([])); // []
+// console.log(evenArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])); // [2, 4, 6, 8, 10]
 
 const countDown = (num) => {
   // Base case
@@ -43,3 +43,5 @@ function countDown_2(num) {
   }
   console.log('Blast off!');
 }
+
+module.exports =  countDown;

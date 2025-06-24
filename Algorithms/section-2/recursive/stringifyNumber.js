@@ -24,6 +24,4 @@ const stringifyNumbers = (obj) => {
   return newObj;
 };
 
-module.exports = {
-  stringifyNumbers,
-};
+module.exports = stringifyNumbers;

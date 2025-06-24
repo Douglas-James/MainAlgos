@@ -10,8 +10,6 @@ const fib = (n) => {
 };
 
 // test case
-console.log(fib(4)); // 3
+// console.log(fib(4)); // 3
 
-module.exports = {
-  fib,
-};
+module.exports = fib;

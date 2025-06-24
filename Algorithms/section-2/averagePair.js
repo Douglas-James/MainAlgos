@@ -20,6 +20,5 @@ const averagePair = (arr, target) => {
   return false;
 };
 
-module.exports = {
-  averagePair,
-};
+module.exports =  averagePair;
+

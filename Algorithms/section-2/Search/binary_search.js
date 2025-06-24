@@ -1,13 +1,11 @@
 /*
- * Binary Search is a search algorithm that finds the position of a target value within a sorted array.
- * Binary search compares the target value to the middle element of the array.
- * If the target value is equal to the middle element, the position is returned.
- * If the target value is less than the middle element, the search continues in the lower half of the array.
- * If the target value is greater than the middle element, the search continues in the upper half of the array.
- * The search continues until the target value is found or the search range is empty.
- * If the target value is not found, -1 is returned.
- * Time complexity: O(log n) - Binary search halves the search space at each step.
- * logarithmic time complexity: O(log n)
+====================================
+||     Binary Search Algorithm    ||
+====================================
+This is an implementation of the Binary Search algorithm.
+It finds the index of a target value in a sorted array.
+sorted portion of the array.
+=======================
  */
 
 const mainBinarySearch = (arr, target) => {
@@ -33,6 +31,4 @@ const mainBinarySearch = (arr, target) => {
   return -1;
 };
 
-module.exports = {
-  mainBinarySearch,
-};
+module.exports = mainBinarySearch;

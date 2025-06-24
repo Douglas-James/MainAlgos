@@ -14,6 +14,4 @@ function factorial(num) {
 //   return total;
 // }
 
-module.exports = {
-  factorial,
-};
+module.exports = factorial;

@@ -7,6 +7,5 @@ const recursiveRange = (num) => {
   return num + recursiveRange(num - 1);
 };
 
-module.exports = {
-  recursiveRange,
-};
+module.exports = recursiveRange
+

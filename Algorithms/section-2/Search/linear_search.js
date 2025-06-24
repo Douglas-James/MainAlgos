@@ -65,9 +65,9 @@ const linearSearch = (arr, val) => {
 };
 
 const randomState = states[Math.floor(Math.random() * states.length)]; // randomly select a state from the states array
-console.log(states[states.indexOf(randomState)]); // print the randomly selected state
-console.log(linearSearch(states, randomState));
-console.log(linearSearch(states, 'California')); // 4
+// console.log(states[states.indexOf(randomState)]); // print the randomly selected state
+// console.log(linearSearch(states, randomState));
+// console.log(linearSearch(states, 'California')); // 4
 
 // we have array of letters from a to h
 /**
@@ -81,18 +81,16 @@ console.log(linearSearch(states, 'California')); // 4
 let a_h = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];
 
 // we can use the build functions indexOf to find the index of the letter 'e'
-console.log(a_h.indexOf('e')); // 4
+// console.log(a_h.indexOf('e')); // 4
 
-// we can use the build function findIndex to find the index of the letter 'e'
-console.log(a_h.findIndex((letter) => letter === 'e')); // 4
+// // we can use the build function findIndex to find the index of the letter 'e'
+// console.log(a_h.findIndex((letter) => letter === 'e')); // 4
 
-// we can use the build function find to find the letter 'e' in the array.
-console.log(a_h.find((letter) => letter === 'e')); // e
+// // we can use the build function find to find the letter 'e' in the array.
+// console.log(a_h.find((letter) => letter === 'e')); // e
 
-// we can use the build function includes to find the letter 'e'
-console.log(a_h.includes('e')); // true or false
+// // we can use the build function includes to find the letter 'e'
+// console.log(a_h.includes('e')); // true or false
 
 // export the function to be used in the test file
-module.exports = {
-  linearSearch,
-};
+module.exports = linearSearch

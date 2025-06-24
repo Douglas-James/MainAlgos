@@ -12,6 +12,4 @@ const isPalindrome = (str) => {
   return false;
 };
 
-module.exports = {
-  isPalindrome,
-};
+module.exports =  isPalindrome;

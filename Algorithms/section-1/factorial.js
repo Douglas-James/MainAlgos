@@ -10,3 +10,5 @@ const factorial = (n) => {
 }
 
 console.log(factorial(5)); // 120
+
+module.exports = factorial;

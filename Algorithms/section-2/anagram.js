@@ -76,6 +76,4 @@ const anagram_a = (str1, str2) => {
 // console.log(anagram_a('qwerty', 'qeywrt')); // true
 // console.log(anagram_a('texttwisttime', 'timetwisttext')); // true
 
-module.exports = {
-  anagram
-};
+module.exports = anagram;

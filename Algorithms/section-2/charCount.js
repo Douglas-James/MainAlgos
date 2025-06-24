@@ -52,28 +52,4 @@ function isAlphaNumeric(char){
   return true;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-module.exports = {
-  charCount
-};
+module.exports = charCount;

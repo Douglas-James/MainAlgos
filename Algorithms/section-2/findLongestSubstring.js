@@ -57,5 +57,5 @@ const findLongestSubstringSlidingWindow = (str) => {
 
 module.exports = {
   findLongestSubstring,
-  findLongestSubstringSlidingWindow,
+  findLongestSubstringSlidingWindow
 };

@@ -8,3 +8,8 @@ function constant(x){
 function sum(n){
   return n * (n + 1) / 2;
 }
+
+module.exports = {
+  constant,
+  sum
+};

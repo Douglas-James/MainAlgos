@@ -33,6 +33,8 @@ const isSubsequenceRecursive = (str1, str2) => {
   // if the first character of the first string is the same as the first character of the second string, call the function recursively
   if (str2[0] === str1[0])
     return isSubsequenceRecursive(str1.slice(1), str2.slice(1));
+  // otherwise, move to the next character in str2
+  return isSubsequenceRecursive(str1, str2.slice(1));
 };
 
 module.exports = {

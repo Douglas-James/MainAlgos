@@ -13,6 +13,4 @@ const productOfArray_1 = (arr) => {
   return arr[0] * productOfArray_1(arr.slice(1));
 };
 
-module.exports = {
-  productOfArray,
-};
+module.exports = productOfArray

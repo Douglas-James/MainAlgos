@@ -61,9 +61,7 @@ function binarySearchs(arr, target) {
   return -1;
 }
 
-let arrys = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-console.log(binarySearchs(arrys, 7)); // 6 index
+// let arrys = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// console.log(binarySearchs(arrys, 7)); // 6 index
 
-module.exports = {
-  binarySearchs,
-};
+module.exports = binarySearchs;

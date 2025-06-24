@@ -69,6 +69,6 @@ Each section contains in-depth solutions and explanations to help you master dat
 
 ## Upcoming Features
 
-Exciting updates are coming in 2025! We will introduce new features to help you run your algorithms seamlessly. Stay tuned for more details. Once available, additional information will be provided [here](#).
+Exciting updates are coming in 2025-2026 Beta application! We will introduce new features to help you run your algorithms seamlessly. Stay tuned for more details. Once available, additional information will be provided [here](#).
 
 Happy Coding!
