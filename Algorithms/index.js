@@ -31,6 +31,7 @@ const {
   quickSort,
   bubbleSortObj,
   selectionSort,
+  selectionSortObj,
 } = require("./section-2/index");
 
 module.exports = {
@@ -61,4 +62,5 @@ module.exports = {
   quickSort,
   bubbleSortObj,
   selectionSort,
+  selectionSortObj,
 };

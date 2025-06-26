@@ -11,6 +11,7 @@ const bubbleSortUnoptimized = require("./bubble_sort_unoptimized");
 const quickSort = require("./quick_sort");
 const bubbleSortObj = require("./bubble_sortObj");
 const selectionSort = require("./selection_sort");
+const selectionSortObj = require("./selection_sortObj");
 
 module.exports = {
   bubbleSortOptimized,
@@ -18,4 +19,5 @@ module.exports = {
   quickSort,
   bubbleSortObj,
   selectionSort,
+  selectionSortObj,
 };

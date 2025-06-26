@@ -33,6 +33,7 @@ const {
   quickSort,
   bubbleSortObj,
   selectionSort,
+  selectionSortObj,
 } = require("../index");
 const { performance } = require("perf_hooks");
 
@@ -499,4 +500,44 @@ test("selectionSort", () => {
   ]);
   const end = performance.now();
   console.log(`selectionSort Execution Time: ${(end - start).toFixed(3)}ms`);
+});
+
+// selectionSortObj test
+test("selectionSortObj", () => {
+  const start = performance.now();
+  const moarKittyData = [
+    { name: "LilBub", age: 7 },
+    { name: "Garfield", age: 40 },
+    { name: "Heathcliff", age: 45 },
+    { name: "Blue", age: 1 },
+    { name: "Grumpy", age: 6 },
+  ];
+
+  expect(selectionSortObj(moarKittyData, "age")).toEqual([
+    { name: "Blue", age: 1 },
+    { name: "Grumpy", age: 6 },
+    { name: "LilBub", age: 7 },
+    { name: "Garfield", age: 40 },
+    { name: "Heathcliff", age: 45 },
+  ]);
+
+  const end = performance.now();
+  console.log(`selectionSortObj Execution Time: ${(end - start).toFixed(3)}ms`);
+});
+test("selectionSortObj", () => {
+  const start = performance.now();
+  const obj = [
+    { name: "Alice", age: 30 },
+    { name: "Bob", age: 25 },
+    { name: "Charlie", age: 35 },
+    { name: "David", age: 20 },
+  ];
+  expect(selectionSortObj(obj, "age")).toEqual([
+    { name: "David", age: 20 },
+    { name: "Bob", age: 25 },
+    { name: "Alice", age: 30 },
+    { name: "Charlie", age: 35 },
+  ]);
+  const end = performance.now();
+  console.log(`selectionSortObj Execution Time: ${(end - start).toFixed(3)}ms`);
 });
