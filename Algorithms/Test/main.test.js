@@ -32,6 +32,7 @@ const {
   bubbleSortUnoptimized,
   quickSort,
   bubbleSortObj,
+  selectionSort,
 } = require("../index");
 const { performance } = require("perf_hooks");
 
@@ -485,17 +486,17 @@ test("bubbleSortObj", () => {
 });
 
 // selectionSort test
-// test("selectionSort", () => {
-//   const start = performance.now();
-//   expect(selectionSort([5, 3, 8, 4, 2, -1])).toEqual([-1, 2, 3, 4, 5, 8]);
-//   const end = performance.now();
-//   console.log(`selectionSort Execution Time: ${(end - start).toFixed(3)}ms`);
-// });
-// test("selectionSort", () => {
-//   const start = performance.now();
-//   expect(selectionSort([8, 1, 2, 3, 4, 5, 6, 7])).toEqual([
-//     1, 2, 3, 4, 5, 6, 7, 8,
-//   ]);
-//   const end = performance.now();
-//   console.log(`selectionSort Execution Time: ${(end - start).toFixed(3)}ms`);
-// });
+test("selectionSort", () => {
+  const start = performance.now();
+  expect(selectionSort([5, 3, 8, 4, 2, -1])).toEqual([-1, 2, 3, 4, 5, 8]);
+  const end = performance.now();
+  console.log(`selectionSort Execution Time: ${(end - start).toFixed(3)}ms`);
+});
+test("selectionSort", () => {
+  const start = performance.now();
+  expect(selectionSort([8, 1, 2, 3, 4, 5, 6, 7])).toEqual([
+    1, 2, 3, 4, 5, 6, 7, 8,
+  ]);
+  const end = performance.now();
+  console.log(`selectionSort Execution Time: ${(end - start).toFixed(3)}ms`);
+});
