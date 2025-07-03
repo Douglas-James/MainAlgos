@@ -42,6 +42,7 @@ const {
   bubbleSortObj,
   selectionSort,
   selectionSortObj,
+  insertionSort,
 } = require("./Sort");
 
 module.exports = {
@@ -74,4 +75,5 @@ module.exports = {
   bubbleSortObj,
   selectionSort,
   selectionSortObj,
+  insertionSort,
 };

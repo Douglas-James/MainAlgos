@@ -12,6 +12,7 @@ const quickSort = require("./quick_sort");
 const bubbleSortObj = require("./bubble_sortObj");
 const selectionSort = require("./selection_sort");
 const selectionSortObj = require("./selection_sortObj");
+const insertionSort = require("./insertion_sort");
 
 module.exports = {
   bubbleSortOptimized,
@@ -20,4 +21,5 @@ module.exports = {
   bubbleSortObj,
   selectionSort,
   selectionSortObj,
+  insertionSort,
 };

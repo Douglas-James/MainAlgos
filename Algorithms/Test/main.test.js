@@ -34,6 +34,7 @@ const {
   bubbleSortObj,
   selectionSort,
   selectionSortObj,
+  insertionSort,
 } = require("../index");
 const { performance } = require("perf_hooks");
 
@@ -540,4 +541,21 @@ test("selectionSortObj", () => {
   ]);
   const end = performance.now();
   console.log(`selectionSortObj Execution Time: ${(end - start).toFixed(3)}ms`);
+});
+
+// Insertion sort test
+test("insertionSort", () => {
+  const start = performance.now();
+  const arr = [2, 1, 9, 76, 4];
+  expect(insertionSort(arr)).toEqual([1, 2, 4, 9, 76]);
+  const end = performance.now();
+  console.log(`insertionSort Execution Time: ${(end - start).toFixed(3)}ms`);
+});
+
+test("insertionSort", () => {
+  const start = performance.now();
+  const arr = [4, 2, 82, 42, 15, 9];
+  expect(insertionSort(arr)).toEqual([2, 4, 9, 15, 42, 82]);
+  const end = performance.now();
+  console.log(`insertionSort Execution Time: ${(end - start).toFixed(3)}ms`);
 });
