@@ -44,4 +44,13 @@ const selectionSortObj = (arr, comparatorOrKey) => {
   return result;
 };
 
+const obj = [
+  { name: "Alice", age: 30 },
+  { name: "Bob", age: 25 },
+  { name: "Charlie", age: 35 },
+  { name: "David", age: 20 },
+];
+
+console.log(selectionSortObj(obj, "age"));
+
 module.exports = selectionSortObj;

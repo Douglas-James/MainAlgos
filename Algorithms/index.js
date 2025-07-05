@@ -33,6 +33,9 @@ const {
   selectionSort,
   selectionSortObj,
   insertionSort,
+  insertionSortObj,
+  merge,
+  mergeSort,
 } = require("./section-2/index");
 
 module.exports = {
@@ -65,4 +68,7 @@ module.exports = {
   selectionSort,
   selectionSortObj,
   insertionSort,
+  insertionSortObj,
+  merge,
+  mergeSort,
 };

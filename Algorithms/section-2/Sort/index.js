@@ -13,6 +13,9 @@ const bubbleSortObj = require("./bubble_sortObj");
 const selectionSort = require("./selection_sort");
 const selectionSortObj = require("./selection_sortObj");
 const insertionSort = require("./insertion_sort");
+const merge = require("./mergeArrays");
+const insertionSortObj = require("./insertion_sortObj");
+const mergeSort = require("./mergeSort");
 
 module.exports = {
   bubbleSortOptimized,
@@ -22,4 +25,7 @@ module.exports = {
   selectionSort,
   selectionSortObj,
   insertionSort,
+  insertionSortObj,
+  merge,
+  mergeSort,
 };

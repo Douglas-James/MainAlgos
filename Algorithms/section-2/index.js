@@ -43,6 +43,9 @@ const {
   selectionSort,
   selectionSortObj,
   insertionSort,
+  insertionSortObj,
+  merge,
+  mergeSort,
 } = require("./Sort");
 
 module.exports = {
@@ -76,4 +79,7 @@ module.exports = {
   selectionSort,
   selectionSortObj,
   insertionSort,
+  insertionSortObj,
+  merge,
+  mergeSort,
 };

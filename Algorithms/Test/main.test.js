@@ -35,6 +35,9 @@ const {
   selectionSort,
   selectionSortObj,
   insertionSort,
+  insertionSortObj,
+  merge,
+  mergeSort,
 } = require("../index");
 const { performance } = require("perf_hooks");
 
@@ -558,4 +561,79 @@ test("insertionSort", () => {
   expect(insertionSort(arr)).toEqual([2, 4, 9, 15, 42, 82]);
   const end = performance.now();
   console.log(`insertionSort Execution Time: ${(end - start).toFixed(3)}ms`);
+});
+
+// insertion sort object
+test("insertionSortObj with key string", () => {
+  const start = performance.now();
+  const input = [
+    { name: "Alice", age: 30 },
+    { name: "Bob", age: 25 },
+    { name: "Charlie", age: 35 },
+    { name: "David", age: 20 },
+  ];
+  const expected = [
+    { name: "David", age: 20 },
+    { name: "Bob", age: 25 },
+    { name: "Alice", age: 30 },
+    { name: "Charlie", age: 35 },
+  ];
+  const result = insertionSortObj(input, "age");
+  expect(result).toEqual(expected);
+  const end = performance.now();
+  console.log(
+    `insertion sort object Execution Time: ${(end - start).toFixed(3)}ms`
+  );
+});
+
+test("insertionSortObj by age, strip name property", () => {
+  const start = performance.now();
+  const input = [
+    { name: "Alice", age: 30 },
+    { name: "Bob", age: 25 },
+    { name: "Charlie", age: 35 },
+    { name: "David", age: 20 },
+  ];
+  const sorted = insertionSortObj(input, "age");
+  const agesOnly = sorted.map(({ age }) => age);
+  expect(agesOnly).toEqual([20, 25, 30, 35]);
+  const end = performance.now();
+  console.log(
+    `insertion sort object Execution Time: ${(end - start).toFixed(3)}ms`
+  );
+});
+// merge test
+test("merge", () => {
+  const start = performance.now();
+  const arr1 = [100, 200];
+  const arr2 = [1, 2, 3, 5, 6];
+  expect(merge(arr1, arr2)).toEqual([1, 2, 3, 5, 6, 100, 200]);
+  const end = performance.now();
+  console.log(`merge Execution Time: ${(end - start).toFixed(3)}ms`);
+});
+
+test("merge", () => {
+  const start = performance.now();
+  const arr1 = [29, 38, 40];
+  const arr2 = [0, 10, 15, 16, 19, 20];
+  expect(merge(arr1, arr2)).toEqual([0, 10, 15, 16, 19, 20, 29, 38, 40]);
+  const end = performance.now();
+  console.log(`merge Execution Time: ${(end - start).toFixed(3)}ms`);
+});
+
+// mergeSort test
+test("mergeSort", () => {
+  const start = performance.now();
+  const arr = [10, 2, 5, 3, 1];
+  expect(mergeSort(arr)).toEqual([1, 2, 3, 5, 10]);
+  const end = performance.now();
+  console.log(`mergeSort Execution Time: ${(end - start).toFixed(3)}ms`);
+});
+
+test("mergeSort", () => {
+  const start = performance.now();
+  const arr = [30, 1, -1, 59, 29, 39, 10, 9, 8, 7];
+  expect(mergeSort(arr)).toEqual([-1, 1, 7, 8, 9, 10, 29, 30, 39, 59]);
+  const end = performance.now();
+  console.log(`mergeSort Execution Time: ${(end - start).toFixed(3)}ms`);
 });
