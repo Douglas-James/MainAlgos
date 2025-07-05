@@ -27,7 +27,4 @@ const quickSort = (arr) => {
   return [...quickSort(left), pivot, ...quickSort(right)];
 };
 
-// Test cases
-console.log(quickSort([5, 4, 3, 2, 1, -3, 0])); // [-3, 0, 1, 2, 3, 4, 5]
-
 module.exports = quickSort;

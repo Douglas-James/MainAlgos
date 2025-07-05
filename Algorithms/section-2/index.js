@@ -38,7 +38,6 @@ const {
 const {
   bubbleSortOptimized,
   bubbleSortUnoptimized,
-  quickSort,
   bubbleSortObj,
   selectionSort,
   selectionSortObj,
@@ -46,6 +45,9 @@ const {
   insertionSortObj,
   merge,
   mergeSort,
+  pivot,
+  quickSort,
+  radixSort,
 } = require("./Sort");
 
 module.exports = {
@@ -74,7 +76,6 @@ module.exports = {
   linearSearch,
   bubbleSortOptimized,
   bubbleSortUnoptimized,
-  quickSort,
   bubbleSortObj,
   selectionSort,
   selectionSortObj,
@@ -82,4 +83,7 @@ module.exports = {
   insertionSortObj,
   merge,
   mergeSort,
+  pivot,
+  quickSort,
+  radixSort,
 };

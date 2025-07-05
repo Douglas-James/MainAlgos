@@ -30,7 +30,6 @@ const {
   linearSearch,
   bubbleSortOptimized,
   bubbleSortUnoptimized,
-  quickSort,
   bubbleSortObj,
   selectionSort,
   selectionSortObj,
@@ -38,6 +37,9 @@ const {
   insertionSortObj,
   merge,
   mergeSort,
+  pivot,
+  quickSort,
+  radixSort,
 } = require("../index");
 const { performance } = require("perf_hooks");
 
@@ -636,4 +638,42 @@ test("mergeSort", () => {
   expect(mergeSort(arr)).toEqual([-1, 1, 7, 8, 9, 10, 29, 30, 39, 59]);
   const end = performance.now();
   console.log(`mergeSort Execution Time: ${(end - start).toFixed(3)}ms`);
+});
+
+// pivot test
+test("pivot", () => {
+  const start = performance.now();
+  const arr = [4, 8, 2, 1, 4, 7, 6, 3];
+  expect(pivot(arr)).toEqual(3);
+  const end = performance.now();
+  console.log(`Pivot Execution Time: ${(end - start).toFixed(3)}ms`);
+});
+
+// quick Sort test
+test("quickSort sorts array of numbers", () => {
+  const start = performance.now();
+  const arr = [4, 6, 1, 7, 3, 2, 5];
+  const result = quickSort([...arr]);
+  const end = performance.now();
+  expect(result).toEqual([1, 2, 3, 4, 5, 6, 7]);
+  console.log(`QuickSort Execution Time: ${(end - start).toFixed(3)}ms`);
+});
+
+test("quickSort sorts array of numbers", () => {
+  const start = performance.now();
+  const arr = [10, -1, 2, 0, 9, 1, 11, 3, 8];
+  const result = quickSort([...arr]);
+  const end = performance.now();
+  expect(result).toEqual([-1, 0, 1, 2, 3, 8, 9, 10, 11]);
+  console.log(`QuickSort Execution Time: ${(end - start).toFixed(3)}ms`);
+});
+
+// radix sort test
+test("radixSort sorts array of non-negative integers", () => {
+  const arr = [23, 345, 5467, 12, 2345, 9852];
+  const start = performance.now();
+  const result = radixSort([...arr]);
+  const end = performance.now();
+  expect(result).toEqual([12, 23, 345, 2345, 5467, 9852]);
+  console.log(`RadixSort Execution Time: ${(end - start).toFixed(3)}ms`);
 });
