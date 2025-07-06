@@ -2,7 +2,7 @@
 ================================================================
 Author: @Douglas-James
 Date: 2023-10-01
-Description: This file contains unit tests for various algorithms
+Description: Unit tests for various algorithms
 ================================================================
 */
 const {
@@ -43,229 +43,134 @@ const {
 } = require("../index");
 const { performance } = require("perf_hooks");
 
-// anagram tests
-test("anagram", () => {
-  const start = performance.now();
-  expect(anagram("hello", "llohe")).toBe(true);
-  const end = performance.now();
-  console.log(`anagram Execution Time: ${(end - start).toFixed(3)}ms`);
-});
+function timedTest(name, fn) {
+  test(name, () => {
+    const start = performance.now();
+    fn();
+    const end = performance.now();
+    console.log(`${name} Execution Time: ${(end - start).toFixed(3)}ms`);
+  });
+}
 
-test("anagram", () => {
-  const start = performance.now();
+// anagram tests
+timedTest("anagram true", () => {
+  expect(anagram("hello", "llohe")).toBe(true);
+});
+timedTest("anagram false", () => {
   expect(anagram("car", "rat")).toBe(false);
-  const end = performance.now();
-  console.log(`anagram Execution Time: ${(end - start).toFixed(3)}ms`);
 });
 
 // averagePair tests
-test("averagePair", () => {
-  const start = performance.now();
+timedTest("averagePair true", () => {
   expect(averagePair([1, 2, 3], 2.5)).toBe(true);
-  const end = performance.now();
-  console.log(`averagePair Execution Time: ${(end - start).toFixed(3)}ms`);
 });
-test("averagePair", () => {
-  const start = performance.now();
+timedTest("averagePair false", () => {
   expect(averagePair([1, 2, 3], 3)).toBe(false);
-  const end = performance.now();
-  console.log(`averagePair Execution Time: ${(end - start).toFixed(3)}ms`);
-});
-// charCount tests
-test("charCount", () => {
-  const start = performance.now();
-  expect(charCount("hello")).toEqual({ h: 1, e: 1, l: 2, o: 1 });
-  const end = performance.now();
-  console.log(`charCount Execution Time: ${(end - start).toFixed(3)}ms`);
-});
-test("charCount", () => {
-  const start = performance.now();
-  expect(charCount("")).toEqual({});
-  const end = performance.now();
-  console.log(`charCount Execution Time: ${(end - start).toFixed(3)}ms`);
-});
-// findLongestSubstring tests
-test("findLongestSubstring", () => {
-  const start = performance.now();
-  expect(findLongestSubstring("abcabcbb")).toBe(3);
-  const end = performance.now();
-  console.log(
-    `findLongestSubstring Execution Time: ${(end - start).toFixed(3)}ms`
-  );
-});
-test("findLongestSubstring", () => {
-  const start = performance.now();
-  expect(findLongestSubstring("bbbbb")).toBe(1);
-  const end = performance.now();
-  console.log(
-    `findLongestSubstring Execution Time: ${(end - start).toFixed(3)}ms`
-  );
-});
-// findLongestSubstringSlidingWindow tests
-test("findLongestSubstringSlidingWindow", () => {
-  const start = performance.now();
-  expect(findLongestSubstringSlidingWindow("abcabcbb")).toBe(3);
-  const end = performance.now();
-  console.log(
-    `findLongestSubstringSlidingWindow Execution Time: ${(end - start).toFixed(
-      3
-    )}ms`
-  );
-});
-test("findLongestSubstringSlidingWindow", () => {
-  const start = performance.now();
-  expect(findLongestSubstringSlidingWindow("bbbbb")).toBe(1);
-  const end = performance.now();
-  console.log(
-    `findLongestSubstringSlidingWindow Execution Time: ${(end - start).toFixed(
-      3
-    )}ms`
-  );
-});
-// isSubsequence tests
-test("isSubsequence", () => {
-  const start = performance.now();
-  expect(isSubsequence("abc", "ahbgdc")).toBe(true);
-  const end = performance.now();
-  console.log(`isSubsequence Execution Time: ${(end - start).toFixed(3)}ms`);
-});
-test("isSubsequence", () => {
-  const start = performance.now();
-  expect(isSubsequence("abc", "acb")).toBe(false);
-  const end = performance.now();
-  console.log(`isSubsequence Execution Time: ${(end - start).toFixed(3)}ms`);
-});
-// isSubsequenceRecursive tests
-test("isSubsequenceRecursive", () => {
-  const start = performance.now();
-  expect(isSubsequenceRecursive("abc", "ahbgdc")).toBe(true);
-  const end = performance.now();
-  console.log(
-    `isSubsequenceRecursive Execution Time: ${(end - start).toFixed(3)}ms`
-  );
-});
-test("isSubsequenceRecursive", () => {
-  const start = performance.now();
-  expect(isSubsequenceRecursive("abc", "acb")).toBe(false);
-  const end = performance.now();
-  console.log(
-    `isSubsequenceRecursive Execution Time: ${(end - start).toFixed(3)}ms`
-  );
-});
-// minSubArrayLen test
-test("minSubArrayLen", () => {
-  const start = performance.now();
-  expect(minSubArrayLen([2, 3, 1, 2, 4, 3], 7)).toBe(2);
-  const end = performance.now();
-  console.log(`minSubArrayLen Execution Time: ${(end - start).toFixed(3)}ms`);
 });
 
-test("minSubArrayLen", () => {
-  const start = performance.now();
+// charCount tests
+timedTest("charCount hello", () => {
+  expect(charCount("hello")).toEqual({ h: 1, e: 1, l: 2, o: 1 });
+});
+timedTest("charCount empty", () => {
+  expect(charCount("")).toEqual({});
+});
+
+// findLongestSubstring tests
+timedTest("findLongestSubstring abcabcbb", () => {
+  expect(findLongestSubstring("abcabcbb")).toBe(3);
+});
+timedTest("findLongestSubstring bbbbb", () => {
+  expect(findLongestSubstring("bbbbb")).toBe(1);
+});
+
+// findLongestSubstringSlidingWindow tests
+timedTest("findLongestSubstringSlidingWindow abcabcbb", () => {
+  expect(findLongestSubstringSlidingWindow("abcabcbb")).toBe(3);
+});
+timedTest("findLongestSubstringSlidingWindow bbbbb", () => {
+  expect(findLongestSubstringSlidingWindow("bbbbb")).toBe(1);
+});
+
+// isSubsequence tests
+timedTest("isSubsequence true", () => {
+  expect(isSubsequence("abc", "ahbgdc")).toBe(true);
+});
+timedTest("isSubsequence false", () => {
+  expect(isSubsequence("abc", "acb")).toBe(false);
+});
+
+// isSubsequenceRecursive tests
+timedTest("isSubsequenceRecursive true", () => {
+  expect(isSubsequenceRecursive("abc", "ahbgdc")).toBe(true);
+});
+timedTest("isSubsequenceRecursive false", () => {
+  expect(isSubsequenceRecursive("abc", "acb")).toBe(false);
+});
+
+// minSubArrayLen tests
+timedTest("minSubArrayLen [2,3,1,2,4,3], 7", () => {
+  expect(minSubArrayLen([2, 3, 1, 2, 4, 3], 7)).toBe(2);
+});
+timedTest("minSubArrayLen [2,1,6,5,4], 9", () => {
   expect(minSubArrayLen([2, 1, 6, 5, 4], 9)).toBe(2);
-  const end = performance.now();
-  console.log(`minSubArrayLen Execution Time: ${(end - start).toFixed(3)}ms`);
 });
+
 // maxSubarraySum tests
-test("maxSubarraySum", () => {
-  const start = performance.now();
+timedTest("maxSubarraySum [1,2,3,4,5], 2", () => {
   expect(maxSubarraySum([1, 2, 3, 4, 5], 2)).toBe(9);
-  const end = performance.now();
-  console.log(`maxSubarraySum Execution Time: ${(end - start).toFixed(3)}ms`);
 });
-test("maxSubarraySum", () => {
-  const start = performance.now();
+timedTest("maxSubarraySum [1,2,3,4,5], 3", () => {
   expect(maxSubarraySum([1, 2, 3, 4, 5], 3)).toBe(12);
-  const end = performance.now();
-  console.log(`maxSubarraySum Execution Time: ${(end - start).toFixed(3)}ms`);
 });
+
 // sameFrequency tests
-test("sameFrequency", () => {
-  const start = performance.now();
+timedTest("sameFrequency true", () => {
   expect(sameFrequency([1, 2, 3], [4, 1, 9])).toBe(true);
-  const end = performance.now();
-  console.log(`sameFrequency Execution Time: ${(end - start).toFixed(3)}ms`);
 });
-test("sameFrequency", () => {
-  const start = performance.now();
+timedTest("sameFrequency false", () => {
   expect(sameFrequency([1, 2, 3], [1, 9])).toBe(false);
-  const end = performance.now();
-  console.log(`sameFrequency Execution Time: ${(end - start).toFixed(3)}ms`);
 });
 
 // sameFrequencyCounter tests
-test("sameFrequencyCounter", () => {
-  const start = performance.now();
+timedTest("sameFrequencyCounter true", () => {
   expect(sameFrequencyCounter(182, 281)).toBe(true);
-  const end = performance.now();
-  console.log(
-    `sameFrequencyCounter Execution Time: ${(end - start).toFixed(3)}ms`
-  );
 });
-
-test("sameFrequencyCounter", () => {
-  const start = performance.now();
+timedTest("sameFrequencyCounter false", () => {
   expect(sameFrequencyCounter(34, 14)).toBe(false);
-  const end = performance.now();
-  console.log(
-    `sameFrequencyCounter Execution Time: ${(end - start).toFixed(3)}ms`
-  );
 });
+
 // areThereDuplicates tests
-test("areThereDuplicates", () => {
-  const start = performance.now();
+timedTest("areThereDuplicates numbers", () => {
   expect(areThereDuplicates(1, 2, 2)).toBe(true);
-  const end = performance.now();
-  console.log(
-    `areThereDuplicates Execution Time: ${(end - start).toFixed(3)}ms`
-  );
 });
-
-test("areThereDuplicates", () => {
-  const start = performance.now();
+timedTest("areThereDuplicates strings", () => {
   expect(areThereDuplicates("a", "b", "c", "a")).toBe(true);
-  const end = performance.now();
-  console.log(
-    `areThereDuplicates Execution Time: ${(end - start).toFixed(3)}ms`
-  );
 });
 
-// fib test
-test("fib", () => {
-  const start = performance.now();
+// fib tests
+timedTest("fib 4", () => {
   expect(fib(4)).toBe(3);
-  const end = performance.now();
-  console.log(`fib Execution Time: ${(end - start).toFixed(3)}ms`);
 });
-test("fib", () => {
-  const start = performance.now();
+timedTest("fib 6", () => {
   expect(fib(6)).toBe(8);
-  const end = performance.now();
-  console.log(`fib Execution Time: ${(end - start).toFixed(3)}ms`);
 });
+
 // factorial test
-test("factorial", () => {
-  const start = performance.now();
+timedTest("factorial 5", () => {
   expect(factorial(5)).toBe(120);
-  const end = performance.now();
-  console.log(`factorial Execution Time: ${(end - start).toFixed(3)}ms`);
 });
-// isPalindrome test
-test("isPalindrome", () => {
-  const start = performance.now();
+
+// isPalindrome tests
+timedTest("isPalindrome true", () => {
   expect(isPalindrome("racecar")).toBe(true);
-  const end = performance.now();
-  console.log(`isPalindrome Execution Time: ${(end - start).toFixed(3)}ms`);
 });
-test("isPalindrome", () => {
-  const start = performance.now();
+timedTest("isPalindrome false", () => {
   expect(isPalindrome("hello")).toBe(false);
-  const end = performance.now();
-  console.log(`isPalindrome Execution Time: ${(end - start).toFixed(3)}ms`);
 });
-// nestedEvenSum test
-test("nestedEvenSum", () => {
-  const start = performance.now();
+
+// nestedEvenSum tests
+timedTest("nestedEvenSum obj1", () => {
   const obj1 = {
     outer: 2,
     obj: {
@@ -278,11 +183,8 @@ test("nestedEvenSum", () => {
     },
   };
   expect(nestedEvenSum(obj1)).toBe(6);
-  const end = performance.now();
-  console.log(`nestedEvenSum Execution Time: ${(end - start).toFixed(3)}ms`);
 });
-test("nestedEvenSum", () => {
-  const start = performance.now();
+timedTest("nestedEvenSum obj2", () => {
   const obj2 = {
     a: 2,
     b: { b: 2, bb: { b: 3, bb: { b: 2 } } },
@@ -291,25 +193,18 @@ test("nestedEvenSum", () => {
     e: { e: { e: 2 }, ee: "car" },
   };
   expect(nestedEvenSum(obj2)).toBe(10);
-  const end = performance.now();
-  console.log(`nestedEvenSum Execution Time: ${(end - start).toFixed(3)}ms`);
 });
-// reverse test
-test("reverse", () => {
-  const start = performance.now();
+
+// reverse tests
+timedTest("reverse hello", () => {
   expect(reverse("hello")).toBe("olleh");
-  const end = performance.now();
-  console.log(`reverse Execution Time: ${(end - start).toFixed(3)}ms`);
 });
-test("reverse", () => {
-  const start = performance.now();
+timedTest("reverse empty", () => {
   expect(reverse("")).toBe("");
-  const end = performance.now();
-  console.log(`reverse Execution Time: ${(end - start).toFixed(3)}ms`);
 });
+
 // stringifyNumbers test
-test("stringifyNumbers", () => {
-  const start = performance.now();
+timedTest("stringifyNumbers", () => {
   expect(
     stringifyNumbers({
       num: 1,
@@ -333,128 +228,70 @@ test("stringifyNumbers", () => {
       },
     },
   });
-  const end = performance.now();
-  console.log(`stringifyNumbers Execution Time: ${(end - start).toFixed(3)}ms`);
 });
 
-// naiveStringSearch test
-test("naiveStringSearch", () => {
-  const start = performance.now();
+// naiveStringSearch tests
+timedTest("naiveStringSearch 1", () => {
   expect(naiveStringSearch("momagaagshksdakaf", "ga")).toBe(1);
-  const end = performance.now();
-  console.log(
-    `naiveStringSearch Execution Time: ${(end - start).toFixed(3)}ms`
-  );
 });
-test("naiveStringSearch", () => {
-  const start = performance.now();
+timedTest("naiveStringSearch not 2", () => {
   expect(naiveStringSearch("momagaagshksdakaf", "ga")).not.toBe(2);
-  const end = performance.now();
-  console.log(
-    `naiveStringSearch Execution Time: ${(end - start).toFixed(3)}ms`
-  );
 });
-// recursiveStringSearch test
-test("recursiveStringSearch", () => {
-  const start = performance.now();
+
+// recursiveStringSearch tests
+timedTest("recursiveStringSearch 1", () => {
   expect(recursiveStringSearch("momagaagshksdakaf", "ga")).toBe(1);
-  const end = performance.now();
-  console.log(
-    `recursiveStringSearch Execution Time: ${(end - start).toFixed(3)}ms`
-  );
 });
-test("recursiveStringSearch", () => {
-  const start = performance.now();
+timedTest("recursiveStringSearch not 2", () => {
   expect(recursiveStringSearch("momagaagshksdakaf", "ga")).not.toBe(2);
-  const end = performance.now();
-  console.log(
-    `recursiveStringSearch Execution Time: ${(end - start).toFixed(3)}ms`
-  );
 });
+
 // binarySearchs test
-test("binarySearchs", () => {
-  const start = performance.now();
+timedTest("binarySearchs 7", () => {
   let arry = [1, 2, 3, 4, 5, 6, 7, 8];
   expect(binarySearchs(arry, 7)).toBe(6);
-  const end = performance.now();
-  console.log(`binarySearchs Execution Time: ${(end - start).toFixed(3)}ms`);
 });
-// linearSearch test
-test("linearSearch", () => {
-  const start = performance.now();
+
+// linearSearch tests
+timedTest("linearSearch -1", () => {
   let arry = [1, 2, 3, 4, 5, 6, 7, 8];
   expect(linearSearch(arry, 10)).toBe(-1);
-  const end = performance.now();
-  console.log(`linearSearch Execution Time: ${(end - start).toFixed(3)}ms`);
 });
-
-test("linearSearch", () => {
-  const start = performance.now();
+timedTest("linearSearch 5", () => {
   let arry = [1, 2, 3, 4, 5, 6, 7, 8];
   expect(linearSearch(arry, 5)).toBe(4);
-  const end = performance.now();
-  console.log(`linearSearch Execution Time: ${(end - start).toFixed(3)}ms`);
 });
 
-// bubbleSortOptimized test
-test("bubbleSortOptimized", () => {
-  const start = performance.now();
+// bubbleSortOptimized tests
+timedTest("bubbleSortOptimized mixed", () => {
   expect(bubbleSortOptimized([5, 3, 8, 4, 2, -1])).toEqual([-1, 2, 3, 4, 5, 8]);
-  const end = performance.now();
-  console.log(
-    `bubbleSortOptimized Execution Time: ${(end - start).toFixed(3)}ms`
-  );
 });
-test("bubbleSortOptimized", () => {
-  const start = performance.now();
+timedTest("bubbleSortOptimized sorted", () => {
   expect(bubbleSortOptimized([8, 1, 2, 3, 4, 5, 6, 7])).toEqual([
     1, 2, 3, 4, 5, 6, 7, 8,
   ]);
-  const end = performance.now();
-  console.log(
-    `bubbleSortOptimized Execution Time: ${(end - start).toFixed(3)}ms`
-  );
 });
 
-// bubbleSort_unoptimized test
-test("bubbleSortUnoptimized", () => {
-  const start = performance.now();
+// bubbleSortUnoptimized tests
+timedTest("bubbleSortUnoptimized mixed", () => {
   expect(bubbleSortUnoptimized([5, 3, 8, 4, 2, -1])).toEqual([
     -1, 2, 3, 4, 5, 8,
   ]);
-  const end = performance.now();
-  console.log(
-    `bubbleSortUnoptimized Execution Time: ${(end - start).toFixed(3)}ms`
-  );
 });
-
-test("bubbleSortUnoptimized", () => {
-  const start = performance.now();
+timedTest("bubbleSortUnoptimized reverse", () => {
   expect(bubbleSortUnoptimized([5, 4, 3, 2, 1])).toEqual([1, 2, 3, 4, 5]);
-  const end = performance.now();
-  console.log(
-    `bubbleSortUnoptimized Execution Time: ${(end - start).toFixed(3)}ms`
-  );
 });
 
-// quickSort test
-test("quickSort", () => {
-  const start = performance.now();
+// quickSort tests
+timedTest("quickSort mixed", () => {
   expect(quickSort([5, 4, 3, 2, 1, -3, 0])).toEqual([-3, 0, 1, 2, 3, 4, 5]);
-  const end = performance.now();
-  console.log(`quickSort Execution Time: ${(end - start).toFixed(3)}ms`);
 });
-
-test("quickSort", () => {
-  const start = performance.now();
+timedTest("quickSort more", () => {
   expect(quickSort([10, 7, 8, 9, 1, 5])).toEqual([1, 5, 7, 8, 9, 10]);
-  const end = performance.now();
-  console.log(`quickSort Execution Time: ${(end - start).toFixed(3)}ms`);
 });
 
-// bubbleSortObj test
-test("bubbleSortObj", () => {
-  const start = performance.now();
+// bubbleSortObj tests
+timedTest("bubbleSortObj moarKittyData", () => {
   const moarKittyData = [
     { name: "LilBub", age: 7 },
     { name: "Garfield", age: 40 },
@@ -462,7 +299,6 @@ test("bubbleSortObj", () => {
     { name: "Blue", age: 1 },
     { name: "Grumpy", age: 6 },
   ];
-
   expect(bubbleSortObj(moarKittyData, "age")).toEqual([
     { name: "Blue", age: 1 },
     { name: "Grumpy", age: 6 },
@@ -470,12 +306,8 @@ test("bubbleSortObj", () => {
     { name: "Garfield", age: 40 },
     { name: "Heathcliff", age: 45 },
   ]);
-
-  const end = performance.now();
-  console.log(`bubbleSortObj Execution Time: ${(end - start).toFixed(3)}ms`);
 });
-test("bubbleSortObj", () => {
-  const start = performance.now();
+timedTest("bubbleSortObj people", () => {
   const obj = [
     { name: "Alice", age: 30 },
     { name: "Bob", age: 25 },
@@ -488,29 +320,20 @@ test("bubbleSortObj", () => {
     { name: "Alice", age: 30 },
     { name: "Charlie", age: 35 },
   ]);
-  const end = performance.now();
-  console.log(`bubbleSortObj Execution Time: ${(end - start).toFixed(3)}ms`);
 });
 
-// selectionSort test
-test("selectionSort", () => {
-  const start = performance.now();
+// selectionSort tests
+timedTest("selectionSort mixed", () => {
   expect(selectionSort([5, 3, 8, 4, 2, -1])).toEqual([-1, 2, 3, 4, 5, 8]);
-  const end = performance.now();
-  console.log(`selectionSort Execution Time: ${(end - start).toFixed(3)}ms`);
 });
-test("selectionSort", () => {
-  const start = performance.now();
+timedTest("selectionSort sorted", () => {
   expect(selectionSort([8, 1, 2, 3, 4, 5, 6, 7])).toEqual([
     1, 2, 3, 4, 5, 6, 7, 8,
   ]);
-  const end = performance.now();
-  console.log(`selectionSort Execution Time: ${(end - start).toFixed(3)}ms`);
 });
 
-// selectionSortObj test
-test("selectionSortObj", () => {
-  const start = performance.now();
+// selectionSortObj tests
+timedTest("selectionSortObj moarKittyData", () => {
   const moarKittyData = [
     { name: "LilBub", age: 7 },
     { name: "Garfield", age: 40 },
@@ -518,7 +341,6 @@ test("selectionSortObj", () => {
     { name: "Blue", age: 1 },
     { name: "Grumpy", age: 6 },
   ];
-
   expect(selectionSortObj(moarKittyData, "age")).toEqual([
     { name: "Blue", age: 1 },
     { name: "Grumpy", age: 6 },
@@ -526,12 +348,8 @@ test("selectionSortObj", () => {
     { name: "Garfield", age: 40 },
     { name: "Heathcliff", age: 45 },
   ]);
-
-  const end = performance.now();
-  console.log(`selectionSortObj Execution Time: ${(end - start).toFixed(3)}ms`);
 });
-test("selectionSortObj", () => {
-  const start = performance.now();
+timedTest("selectionSortObj people", () => {
   const obj = [
     { name: "Alice", age: 30 },
     { name: "Bob", age: 25 },
@@ -544,30 +362,18 @@ test("selectionSortObj", () => {
     { name: "Alice", age: 30 },
     { name: "Charlie", age: 35 },
   ]);
-  const end = performance.now();
-  console.log(`selectionSortObj Execution Time: ${(end - start).toFixed(3)}ms`);
 });
 
-// Insertion sort test
-test("insertionSort", () => {
-  const start = performance.now();
-  const arr = [2, 1, 9, 76, 4];
-  expect(insertionSort(arr)).toEqual([1, 2, 4, 9, 76]);
-  const end = performance.now();
-  console.log(`insertionSort Execution Time: ${(end - start).toFixed(3)}ms`);
+// insertionSort tests
+timedTest("insertionSort [2,1,9,76,4]", () => {
+  expect(insertionSort([2, 1, 9, 76, 4])).toEqual([1, 2, 4, 9, 76]);
+});
+timedTest("insertionSort [4,2,82,42,15,9]", () => {
+  expect(insertionSort([4, 2, 82, 42, 15, 9])).toEqual([2, 4, 9, 15, 42, 82]);
 });
 
-test("insertionSort", () => {
-  const start = performance.now();
-  const arr = [4, 2, 82, 42, 15, 9];
-  expect(insertionSort(arr)).toEqual([2, 4, 9, 15, 42, 82]);
-  const end = performance.now();
-  console.log(`insertionSort Execution Time: ${(end - start).toFixed(3)}ms`);
-});
-
-// insertion sort object
-test("insertionSortObj with key string", () => {
-  const start = performance.now();
+// insertionSortObj tests
+timedTest("insertionSortObj by age", () => {
   const input = [
     { name: "Alice", age: 30 },
     { name: "Bob", age: 25 },
@@ -580,16 +386,9 @@ test("insertionSortObj with key string", () => {
     { name: "Alice", age: 30 },
     { name: "Charlie", age: 35 },
   ];
-  const result = insertionSortObj(input, "age");
-  expect(result).toEqual(expected);
-  const end = performance.now();
-  console.log(
-    `insertion sort object Execution Time: ${(end - start).toFixed(3)}ms`
-  );
+  expect(insertionSortObj(input, "age")).toEqual(expected);
 });
-
-test("insertionSortObj by age, strip name property", () => {
-  const start = performance.now();
+timedTest("insertionSortObj ages only", () => {
   const input = [
     { name: "Alice", age: 30 },
     { name: "Bob", age: 25 },
@@ -599,81 +398,46 @@ test("insertionSortObj by age, strip name property", () => {
   const sorted = insertionSortObj(input, "age");
   const agesOnly = sorted.map(({ age }) => age);
   expect(agesOnly).toEqual([20, 25, 30, 35]);
-  const end = performance.now();
-  console.log(
-    `insertion sort object Execution Time: ${(end - start).toFixed(3)}ms`
-  );
-});
-// merge test
-test("merge", () => {
-  const start = performance.now();
-  const arr1 = [100, 200];
-  const arr2 = [1, 2, 3, 5, 6];
-  expect(merge(arr1, arr2)).toEqual([1, 2, 3, 5, 6, 100, 200]);
-  const end = performance.now();
-  console.log(`merge Execution Time: ${(end - start).toFixed(3)}ms`);
 });
 
-test("merge", () => {
-  const start = performance.now();
-  const arr1 = [29, 38, 40];
-  const arr2 = [0, 10, 15, 16, 19, 20];
-  expect(merge(arr1, arr2)).toEqual([0, 10, 15, 16, 19, 20, 29, 38, 40]);
-  const end = performance.now();
-  console.log(`merge Execution Time: ${(end - start).toFixed(3)}ms`);
+// merge tests
+timedTest("merge [100,200] [1,2,3,5,6]", () => {
+  expect(merge([100, 200], [1, 2, 3, 5, 6])).toEqual([1, 2, 3, 5, 6, 100, 200]);
+});
+timedTest("merge [29,38,40] [0,10,15,16,19,20]", () => {
+  expect(merge([29, 38, 40], [0, 10, 15, 16, 19, 20])).toEqual([
+    0, 10, 15, 16, 19, 20, 29, 38, 40,
+  ]);
 });
 
-// mergeSort test
-test("mergeSort", () => {
-  const start = performance.now();
-  const arr = [10, 2, 5, 3, 1];
-  expect(mergeSort(arr)).toEqual([1, 2, 3, 5, 10]);
-  const end = performance.now();
-  console.log(`mergeSort Execution Time: ${(end - start).toFixed(3)}ms`);
+// mergeSort tests
+timedTest("mergeSort [10,2,5,3,1]", () => {
+  expect(mergeSort([10, 2, 5, 3, 1])).toEqual([1, 2, 3, 5, 10]);
 });
-
-test("mergeSort", () => {
-  const start = performance.now();
-  const arr = [30, 1, -1, 59, 29, 39, 10, 9, 8, 7];
-  expect(mergeSort(arr)).toEqual([-1, 1, 7, 8, 9, 10, 29, 30, 39, 59]);
-  const end = performance.now();
-  console.log(`mergeSort Execution Time: ${(end - start).toFixed(3)}ms`);
+timedTest("mergeSort [30,1,-1,59,29,39,10,9,8,7]", () => {
+  expect(mergeSort([30, 1, -1, 59, 29, 39, 10, 9, 8, 7])).toEqual([
+    -1, 1, 7, 8, 9, 10, 29, 30, 39, 59,
+  ]);
 });
 
 // pivot test
-test("pivot", () => {
-  const start = performance.now();
-  const arr = [4, 8, 2, 1, 4, 7, 6, 3];
-  expect(pivot(arr)).toEqual(3);
-  const end = performance.now();
-  console.log(`Pivot Execution Time: ${(end - start).toFixed(3)}ms`);
+timedTest("pivot [4,8,2,1,4,7,6,3]", () => {
+  expect(pivot([4, 8, 2, 1, 4, 7, 6, 3])).toEqual(3);
 });
 
-// quick Sort test
-test("quickSort sorts array of numbers", () => {
-  const start = performance.now();
-  const arr = [4, 6, 1, 7, 3, 2, 5];
-  const result = quickSort([...arr]);
-  const end = performance.now();
-  expect(result).toEqual([1, 2, 3, 4, 5, 6, 7]);
-  console.log(`QuickSort Execution Time: ${(end - start).toFixed(3)}ms`);
+// quickSort more tests
+timedTest("quickSort [4,6,1,7,3,2,5]", () => {
+  expect(quickSort([4, 6, 1, 7, 3, 2, 5])).toEqual([1, 2, 3, 4, 5, 6, 7]);
+});
+timedTest("quickSort [10,-1,2,0,9,1,11,3,8]", () => {
+  expect(quickSort([10, -1, 2, 0, 9, 1, 11, 3, 8])).toEqual([
+    -1, 0, 1, 2, 3, 8, 9, 10, 11,
+  ]);
 });
 
-test("quickSort sorts array of numbers", () => {
-  const start = performance.now();
-  const arr = [10, -1, 2, 0, 9, 1, 11, 3, 8];
-  const result = quickSort([...arr]);
-  const end = performance.now();
-  expect(result).toEqual([-1, 0, 1, 2, 3, 8, 9, 10, 11]);
-  console.log(`QuickSort Execution Time: ${(end - start).toFixed(3)}ms`);
-});
-
-// radix sort test
-test("radixSort sorts array of non-negative integers", () => {
-  const arr = [23, 345, 5467, 12, 2345, 9852];
-  const start = performance.now();
-  const result = radixSort([...arr]);
-  const end = performance.now();
-  expect(result).toEqual([12, 23, 345, 2345, 5467, 9852]);
-  console.log(`RadixSort Execution Time: ${(end - start).toFixed(3)}ms`);
+// radixSort test
+timedTest("radixSort [23,345,5467,12,2345,9852]", () => {
+  expect(radixSort([23, 345, 5467, 12, 2345, 9852])).toEqual([
+    12, 23, 345, 2345, 5467, 9852,
+  ]);
 });
