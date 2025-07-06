@@ -2,9 +2,12 @@
 ================================================
 ||          Quick Sort Algorithm              ||
 ================================================
-This is an implementation of the Quick Sort algorithm.
-It sorts an array by selecting a 'pivot' element and partitioning the other elements into two
-sub-arrays according to whether they are less than or greater than the pivot.
+This is a quick sort algorithm implementation.
+1. It takes an array as input.
+2. It selects a pivot element from the array.
+3. It partitions the array into two sub-arrays: one with elements less than the pivot and one with elements greater than the pivot.
+4. It recursively applies the quick sort algorithm to the two sub-arrays.
+5. It combines the sorted sub-arrays and the pivot element to form the final sorted array.
 */
 
 const quickSort = (arr) => {

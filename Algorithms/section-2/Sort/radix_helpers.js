@@ -2,8 +2,13 @@
 =======================================
 ||          Radix helper             ||
 =======================================
+There are a few helper functions that are used in the radixSort function.
+1. getDigit: Gets the digit at the given position of the given number.
+2. digitCount: Gets the number of digits in a number.
+3. mostDigits: Gets the number of digits in the largest number in an array.
 */
 
+//
 const getDigit = (num, i) => {
   return Math.floor(Math.abs(num) / Math.pow(10, i)) % 10;
 };

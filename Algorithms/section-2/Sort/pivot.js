@@ -2,11 +2,15 @@
 ======================
 ||    Pivot         ||
 ======================
-this function takes an array and a pivot index,
-and returns a new array with the elements rearranged such that
-the elements less than the pivot come before it,
-and the elements greater than or equal to the pivot come after it.
-=======================
+  // set pivot to the first element
+  // set swapIdx to the first element
+  // loop through the array
+  //   if the current element is less than the pivot
+  //     increment swapIdx
+  //     swap the current element with the element at swapIdx
+  // swap the pivot with the element at swapIdx
+  // return swapIdx
+
 */
 // function pivot(arr, start=0, end=arr.length+1){
 //   function swap(array, i, j) {
