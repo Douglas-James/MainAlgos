@@ -16,3 +16,7 @@ Algorithms are step-by-step methods for solving problems. They are crucial in co
 |                     |                                                                | - **Selection Sort**: Selects the smallest element from an unsorted list and moves it to the sorted part. |
 | **Recursion**       | When a function calls itself to solve a problem.               | - **Factorial Calculation**: Multiplies a number by the factorial of the number minus one.                |
 |                     |                                                                | - **Fibonacci Sequence**: Sums the two preceding numbers to get the next number in the sequence.          |
+
+# Recommendations
+
+Create a `coding-exercise` folder to practice implementing algorithms from different categories. For each exercise, make a separate subfolder with its own JavaScript file. In each JavaScript file, include a description of the problem as a comment at the top, followed by your solution code. Use this space as your playground to experiment, learn, and improve your understanding of various algorithms.
