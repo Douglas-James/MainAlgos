@@ -38,6 +38,8 @@ const {
   pivot,
   quickSort,
   radixSort,
+  heapSort,
+  shellSort,
 } = require("./section-2/index");
 
 module.exports = {
@@ -76,4 +78,6 @@ module.exports = {
   pivot,
   quickSort,
   radixSort,
+  heapSort,
+  shellSort,
 };

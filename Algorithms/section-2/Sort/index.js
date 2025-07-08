@@ -18,6 +18,8 @@ const mergeSort = require("./mergeSort");
 const pivot = require("./pivot");
 const quickSort = require("./quick_sort");
 const radixSort = require("./radix_sort");
+const heapSort = require("./heap_sort");
+const shellSort = require("./shell_sort");
 
 module.exports = {
   bubbleSortOptimized,
@@ -32,4 +34,6 @@ module.exports = {
   pivot,
   quickSort,
   radixSort,
+  heapSort,
+  shellSort,
 };

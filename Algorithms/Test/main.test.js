@@ -40,6 +40,8 @@ const {
   pivot,
   quickSort,
   radixSort,
+  heapSort,
+  shellSort,
 } = require("../index");
 const { performance } = require("perf_hooks");
 
@@ -439,5 +441,32 @@ timedTest("quickSort [10,-1,2,0,9,1,11,3,8]", () => {
 timedTest("radixSort [23,345,5467,12,2345,9852]", () => {
   expect(radixSort([23, 345, 5467, 12, 2345, 9852])).toEqual([
     12, 23, 345, 2345, 5467, 9852,
+  ]);
+});
+timedTest("radixSort [1,2,3,4,0]", () => {
+  expect(radixSort([1, 2, 3, 4, 0])).toEqual([0, 1, 2, 3, 4]);
+});
+// heap sort tests
+timedTest("heapSort [1,3,5,7,9,2,4,6,8,0]", () => {
+  expect(heapSort([1, 3, 5, 7, 9, 2, 4, 6, 8, 0])).toEqual([
+    0, 1, 2, 3, 4, 5, 6, 7, 8, 9,
+  ]);
+});
+timedTest("heapSort [10,9,8,7,6,5,4,3,2,1]", () => {
+  expect(heapSort([10, 9, 8, 7, 6, 5, 4, 3, 2, 1])).toEqual([
+    1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+  ]);
+});
+
+// shell sort tests
+timedTest("shelSort [10,9,8,7,6,5,4,3,2,1]", () => {
+  expect(shellSort([10, 9, 8, 7, 6, 5, 4, 3, 2, 1])).toEqual([
+    1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+  ]);
+});
+
+timedTest("shellSort [10,9,8,7,6,5,4,3,2,1]", () => {
+  expect(shellSort([10, 9, 8, 7, 6, 5, 4, 3, 2, 1])).toEqual([
+    1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
   ]);
 });
